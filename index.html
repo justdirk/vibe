@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dirk Ahlborn — Learn to build with AI. From the founder of Hyperloop TT.</title>
+<meta name="description" content="Duolingo-style courses taught by Hyperloop TT founder Dirk Ahlborn: AI in Practice and Startup Founder — with a real AI workspace and founder tools included.">
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12151d; --panel2:#181c27; --border:#242a38;
+    --text:#eef0f6; --muted:#98a0b3; --accent:#f59e0b; --accent2:#6ea8fe;
+    --green:#4ade80; --radius:14px;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent2);text-decoration:none}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .logo{font-weight:800;font-size:20px;color:var(--text)}
+  .logo span{color:var(--accent)}
+  nav .links a{color:var(--muted);margin-left:22px;font-size:14.5px}
+  nav .links a.cta{color:#0b0d12;background:var(--accent);padding:9px 16px;border-radius:999px;font-weight:700}
+  header.hero{padding:64px 0 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
+  @media(max-width:760px){header.hero{grid-template-columns:1fr}}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:14px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 18px;font-weight:800}
+  h1 em{color:var(--accent);font-style:normal}
+  .sub{color:var(--muted);font-size:18px;margin:0 0 26px;max-width:34em}
+  .btn{display:inline-block;background:var(--accent);color:#0b0d12;font-weight:700;padding:14px 26px;border-radius:999px;font-size:16px}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:10px}
+  .portrait{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-align:center;padding:20px}
+  .cred{display:flex;flex-wrap:wrap;gap:10px;padding:10px 0 34px}
+  .cred span{border:1px solid var(--border);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--muted)}
+  .cred b{color:var(--text)}
+  section{padding:46px 0}
+  h2{font-size:28px;margin:0 0 8px}
+  .lead{color:var(--muted);margin:0 0 28px;max-width:44em}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
+  .card .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+  .card h3{margin:0 0 8px;font-size:21px}
+  .card p{color:var(--muted);font-size:15px;margin:0 0 16px}
+  .card ul{margin:0 0 20px;padding-left:18px;color:var(--muted);font-size:14.5px}
+  .card ul li{margin-bottom:6px}
+  .card .price{margin-top:auto;font-size:15px;color:var(--muted)}
+  .card .price b{color:var(--text);font-size:22px}
+  .card .price s{opacity:.6}
+  .card .btn{margin-top:14px;text-align:center}
+  .perk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+  .perk .ico{font-size:24px;line-height:1;margin-top:3px}
+  .perk h4{margin:0 0 4px;font-size:16px}
+  .perk p{margin:0;color:var(--muted);font-size:14.5px}
+  .quoteband{border-left:3px solid var(--accent);padding:8px 0 8px 22px;margin:12px 0 0}
+  .quoteband p{font-size:19px;font-style:italic;color:var(--text);margin:0 0 6px}
+  .quoteband span{color:var(--muted);font-size:14px}
+  footer{border-top:1px solid var(--border);padding:34px 0 50px;color:var(--muted);font-size:13.5px}
+  footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">dirk<span>.it</span></div>
+    <div class="links">
+      <a href="/ai/">AI Course</a>
+      <a href="/founder/">Founder Course</a>
+      <a href="#about">About</a>
+      <a class="cta" href="#courses">Start learning</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="kicker">Founder of Hyperloop TT · Now teaching</div>
+      <h1>Learn to build.<br>From someone who <em>actually built</em>.</h1>
+      <p class="sub">Two courses, taught the way Duolingo teaches languages — bite-size, gamified, daily. Master AI as a practical skill, or take a startup from zero to funded. With real tools included, not just videos.</p>
+      <a class="btn" href="#courses">See the courses</a>
+      <a class="btn ghost" href="#about">Who is Dirk?</a>
+    </div>
+    <div class="portrait">[ Portrait photo of Dirk — drop in assets/dirk.jpg ]</div>
+  </header>
+
+  <div class="cred">
+    <span><b>Founder &amp; CEO</b> · Hyperloop TT</span>
+    <span><b>Wikipedia</b> · Dirk Ahlborn</span>
+    <span><b>Keynote speaker</b> · 40+ countries</span>
+    <span><b>Featured by</b> Bosch, global media</span>
+  </div>
+
+  <section id="courses">
+    <h2>The courses</h2>
+    <p class="lead">Not video libraries you abandon after lesson three. Structured like a game: streaks, XP, missions — and every lesson ends with you <i>doing</i> the thing, live, in real tools.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="tag">13 Masterclasses · App + AI Workspace</div>
+        <h3>AI in Practice: Create, Work, and Earn</h3>
+        <p>From prompting to shipping paid work: writing, images, video, voice, websites without code, automation — ending with your first paid AI gig.</p>
+        <ul>
+          <li>Learn in the app, practice in <b>your own AI workspace</b> at chat.dirk.it — real frontier models, included</li>
+          <li>Build a portfolio as you go: every masterclass produces something real</li>
+          <li>Finale: "Launch: Your First Paid AI Gig"</li>
+        </ul>
+        <div class="price">Founding student price <b>$79</b> <s>$129</s></div>
+        <a class="btn" href="/ai/">Explore the AI course →</a>
+      </div>
+      <div class="card">
+        <div class="tag">14 Masterclasses · App + Founder Tools</div>
+        <h3>Startup Founder: Zero to Funded</h3>
+        <p>The complete founder journey — idea, validation, business model, product in the AI era, go-to-market, fundraising, the hard things, scale.</p>
+        <ul>
+          <li>Taught by someone who raised, built, and led a company you've heard of</li>
+          <li>Includes <b>Vault</b>: build your business plan and pitch materials as you learn</li>
+          <li>AI sparring partners: pitch coach, investor-objection trainer</li>
+        </ul>
+        <div class="price">Founding student price <b>$129</b> <s>$199</s></div>
+        <a class="btn" href="/founder/">Explore the Founder course →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>More than a course — a toolkit</h2>
+    <p class="lead">Buying a course here doesn't get you a folder of videos. It gets you working infrastructure.</p>
+    <div class="perk"><div class="ico">🤖</div><div><h4>Your own AI workspace (chat.dirk.it)</h4><p>A private, full-featured AI chat with curated frontier models and weekly credits included — no API keys, no setup. Lessons end with "now do it live," and you actually can.</p></div></div>
+    <div class="perk"><div class="ico">🗄️</div><div><h4>Vault — founder tools</h4><p>Build your business plan, financial story, and pitch materials in a structured tool as you move through the course. Walk out with documents you can put in front of investors.</p></div></div>
+    <div class="perk"><div class="ico">📱</div><div><h4>The app that keeps you going</h4><p>Streaks, XP, missions, spaced repetition. The reason people finish these courses is the same reason people finish Duolingo trees.</p></div></div>
+  </section>
+
+  <section id="about">
+    <h2>About Dirk</h2>
+    <p class="lead">Dirk Ahlborn is the founder and CEO of Hyperloop Transportation Technologies, the company that took Elon Musk's hyperloop concept and turned it into a global engineering effort powered by a crowd of contributors — one of the boldest experiments in how companies get built. He has spoken on innovation and entrepreneurship in over 40 countries, and now runs restaurants and builds software in Brazil.</p>
+    <div class="quoteband">
+      <p>"The best way to predict whether you can build something is to have built something improbable before."</p>
+      <span>Why these courses exist: to teach building — by someone who builds.</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="cols">
+      <div>© 2026 Dirk Ahlborn · dirk.it</div>
+      <div><a href="/ai/">AI in Practice</a> · <a href="/founder/">Zero to Funded</a> · <a href="mailto:mail@dirk.it">Contact</a></div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
