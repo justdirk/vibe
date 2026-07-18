@@ -34,6 +34,8 @@
     radial-gradient(120% 100% at 50% 120%, rgba(245,166,35,.30), transparent 60%),
     radial-gradient(70% 60% at 90% 0%, rgba(74,222,128,.10), transparent 55%),
     linear-gradient(180deg,#191e2b 0%,#12161f 70%,#0F1117 100%)}
+  .slot.photo{background-size:cover;background-position:center}
+  .slot.photo::after{background:linear-gradient(180deg,rgba(15,17,23,.05),rgba(15,17,23,.35))}
   .faq-a{display:none}
   .faq-item.open .faq-a{display:block}
   .faq-item .faq-plus{transition:transform .2s}
@@ -136,7 +138,7 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:24px">
 
     <article style="background:#151926;border:1px solid #242A38;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
-      <div style="height:220px;position:relative"><div class="slot" data-slot="course-home-cook" aria-hidden="true"></div></div>
+      <div style="height:220px;position:relative"><div class="slot photo" data-slot="course-home-cook" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151327_11fb44a1-81f6-4e42-8148-92bab3bb7baa_min.webp')" role="img" aria-label="Home cook searing a steak in warm light"></div></div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#4ADE80;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.35)">Start here</span>
@@ -145,12 +147,15 @@
         <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin:0;text-wrap:pretty">The Confident Home Cook</h3>
         <p style="font-size:15px;line-height:1.62;color:#B9B4A9;margin:0;text-wrap:pretty">Stop following recipes. Start cooking. Knife confidence, heat control, flavor building, proteins without fear, one-pot wins, foolproof baking — ending with the capstone every home cook needs: hosting a dinner party without panic.</p>
         <p style="font-size:13.5px;line-height:1.7;color:#8a8f9d;margin:0"><span style="color:#4ADE80;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px">Highlights&nbsp;&nbsp;</span>Set Up to Win · Knife Confidence · Heat Is the Ingredient · Building Flavor · Proteins Without Fear · Capstone: Host Without Panic</p>
-        <span style="margin-top:auto;align-self:flex-start;font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a href="https://buy.stripe.com/fZu7sL01dfP65madUlfw405" class="hov-green" style="background:#4ADE80;color:#0F1117;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px">Get this course · $39</a>
+          <span style="font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        </div>
       </div>
     </article>
 
     <article style="background:#151926;border:1px solid #242A38;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
-      <div style="height:220px;position:relative"><div class="slot v2" data-slot="course-classical" aria-hidden="true"></div></div>
+      <div style="height:220px;position:relative"><div class="slot photo" data-slot="course-classical" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151338_97ba0aa9-ab54-4c83-8e7c-e1494f2f046a_min.webp')" role="img" aria-label="Professional kitchen brigade at night"></div></div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#F5A623;background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.35)">Professional</span>
@@ -159,12 +164,15 @@
         <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin:0;text-wrap:pretty">The Classical Kitchen</h3>
         <p style="font-size:15px;line-height:1.62;color:#B9B4A9;margin:0;text-wrap:pretty">The full classical curriculum, the way culinary schools teach it: knife mastery and classical cuts, fonds, the five mother sauces and their children, dry-heat and moist cooking methods, butchery, fish, garde manger, pâtisserie — through the final capstone: The Pass.</p>
         <p style="font-size:13.5px;line-height:1.7;color:#8a8f9d;margin:0"><span style="color:#F5A623;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px">Highlights&nbsp;&nbsp;</span>Knife Mastery &amp; Classical Cuts · Fonds: The Foundation of Everything · The Mother Sauces &amp; Their Children · Butchery &amp; Charcuterie · Pâtisserie Fundamentals · Capstone: The Pass</p>
-        <span style="margin-top:auto;align-self:flex-start;font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a href="https://buy.stripe.com/aFacN515h9qI8ymeYpfw406" class="hov-green" style="background:#4ADE80;color:#0F1117;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px">Get this course · $49</a>
+          <span style="font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        </div>
       </div>
     </article>
 
     <article style="background:#151926;border:1px solid #242A38;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
-      <div style="height:220px;position:relative"><div class="slot v3" data-slot="course-science" aria-hidden="true"></div></div>
+      <div style="height:220px;position:relative"><div class="slot photo" data-slot="course-science" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151339_e6b208a8-b4d0-49fc-8098-d9a9cee33042_min.webp')" role="img" aria-label="Macro close-up of sourdough crumb structure"></div></div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#60A5FA;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.35)">Food science</span>
@@ -173,12 +181,15 @@
         <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin:0;text-wrap:pretty">The Science of Cooking</h3>
         <p style="font-size:15px;line-height:1.62;color:#B9B4A9;margin:0;text-wrap:pretty">Why food does what it does. Maillard and caramelization, protein denaturation, starches and gels, emulsions, fermentation, bread and gluten, microbiology and sensory science — the kitchen as laboratory, taught without a chemistry degree.</p>
         <p style="font-size:13.5px;line-height:1.7;color:#8a8f9d;margin:0"><span style="color:#60A5FA;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px">Highlights&nbsp;&nbsp;</span>Water &amp; Heat: The Physics Engine · Browning: Maillard, Caramelization &amp; Pyrolysis · Fats &amp; Emulsions · Fermentation &amp; Enzymes · Bread &amp; Gluten · Sensory Science &amp; Flavor</p>
-        <span style="margin-top:auto;align-self:flex-start;font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a href="https://buy.stripe.com/14A28r9BNdGY7ui4jLfw407" class="hov-green" style="background:#4ADE80;color:#0F1117;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px">Get this course · $49</a>
+          <span style="font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        </div>
       </div>
     </article>
 
     <article style="background:#151926;border:1px solid #242A38;border-radius:14px;overflow:hidden;display:flex;flex-direction:column">
-      <div style="height:220px;position:relative"><div class="slot" data-slot="course-gelato" aria-hidden="true"></div></div>
+      <div style="height:220px;position:relative"><div class="slot photo" data-slot="course-gelato" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151351_223575d7-e23c-4d33-8c98-731421fb8b7d_min.webp')" role="img" aria-label="Artisan gelato pulled from a steel tin"></div></div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#F5A623;background:rgba(245,166,35,.1);border:1px solid rgba(245,166,35,.35)">Craft</span>
@@ -187,12 +198,15 @@
         <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin:0;text-wrap:pretty">Gelato: Engineer It From Scratch</h3>
         <p style="font-size:15px;line-height:1.62;color:#B9B4A9;margin:0;text-wrap:pretty">Gelato is engineering you can eat. Learn the functional ingredients, the science of balancing a mix, milk bases, fruit and sorbet, sugar-free formulation, and real production technique — build recipes from numbers, not luck.</p>
         <p style="font-size:13.5px;line-height:1.7;color:#8a8f9d;margin:0"><span style="color:#F5A623;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:11.5px">Highlights&nbsp;&nbsp;</span>The Gelato Engineer's Mindset · Building Blocks: Functional Ingredients · The Science of Balance · Sugar-Free / MIX ZERO · Finishing &amp; Production</p>
-        <span style="margin-top:auto;align-self:flex-start;font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a href="https://buy.stripe.com/6oU5kD5lx32k29Y4jLfw408" class="hov-green" style="background:#4ADE80;color:#0F1117;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px">Get this course · $99</a>
+          <span style="font-size:13px;font-weight:500;color:#F5A623;border:1px solid rgba(245,166,35,.35);padding:6px 14px;border-radius:999px">Gelato school charges €900+ for this</span>
+        </div>
       </div>
     </article>
 
     <article style="background:#151926;border:1px solid #242A38;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;grid-column:1 / -1">
-      <div style="height:220px;position:relative"><div class="slot v2" data-slot="course-sousvide" aria-hidden="true"></div></div>
+      <div style="height:220px;position:relative"><div class="slot photo" data-slot="course-sousvide" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151353_bc674235-9eb8-4e0c-81ca-1b0a91b8e67a_min.webp')" role="img" aria-label="Sous vide immersion circulator in a water bath"></div></div>
       <div style="padding:26px;display:flex;flex-direction:column;gap:14px;flex:1">
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
           <span style="font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px;color:#60A5FA;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.35)">Precision</span>
@@ -200,7 +214,10 @@
         </div>
         <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin:0;text-wrap:pretty">Sous Vide Mastery</h3>
         <p style="font-size:15px;line-height:1.62;color:#B9B4A9;margin:0;text-wrap:pretty">Precision cooking from zero: equipment, food safety, and total thermal control. Short, dense, and exact — the fastest way to never overcook a protein again.</p>
-        <span style="margin-top:auto;align-self:flex-start;font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        <div style="margin-top:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <a href="https://buy.stripe.com/aFa4gzeW79qIg0ObMdfw409" class="hov-green" style="background:#4ADE80;color:#0F1117;font-weight:600;font-size:14px;padding:9px 20px;border-radius:999px">Get this course · $29</a>
+          <span style="font-size:13px;font-weight:500;color:#4ADE80;border:1px solid rgba(74,222,128,.35);padding:6px 14px;border-radius:999px">First masterclasses free</span>
+        </div>
       </div>
     </article>
 
@@ -239,7 +256,7 @@
       <div style="background:#0F1117;border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:10px">
         <span style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#F5A623;font-weight:600">Mission</span>
         <span style="font-size:12px;line-height:1.45">Sear a steak with a proper crust. Submit your result.</span>
-        <div style="height:86px;border-radius:10px;overflow:hidden;position:relative"><div class="slot v3" data-slot="mission-dish" aria-hidden="true"></div></div>
+        <div style="height:86px;border-radius:10px;overflow:hidden;position:relative"><div class="slot photo" data-slot="mission-dish" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151407_4076914d-2574-4517-9147-51bd9b1a8b2a_min.webp')" role="img" aria-label="Seared steak plated on dark ceramic"></div></div>
         <span style="background:#F5A623;color:#0F1117;font-weight:600;font-size:11px;padding:7px;border-radius:999px;text-align:center">Submit mission</span>
       </div>
     </div>
@@ -268,13 +285,13 @@
     <div style="background:#151926;border:1.5px solid #4ADE80;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:18px;position:relative;box-shadow:0 20px 60px rgba(74,222,128,.08)">
       <span style="position:absolute;top:-13px;left:32px;background:#4ADE80;color:#0F1117;font-size:12px;font-weight:600;padding:4px 14px;border-radius:999px">Most popular</span>
       <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:24px;margin:0">Single course</h3>
-      <p style="font-size:15px;line-height:1.7;color:#B9B4A9;margin:0">$39 to start · 3 months included · then $9.99/mo · cancel anytime</p>
+      <p style="font-size:15px;line-height:1.7;color:#B9B4A9;margin:0">From $29 to start · 3 months included · then $9.99/mo · cancel anytime</p>
       <a href="#courses" class="hov-green" style="margin-top:auto;text-align:center;background:#4ADE80;color:#0F1117;font-weight:600;font-size:15px;padding:12px 24px;border-radius:999px">Choose a course</a>
     </div>
     <div style="background:#151926;border:1px solid #242A38;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:18px">
       <h3 style="font-family:'Fraunces',serif;font-weight:500;font-size:24px;margin:0">Everything</h3>
-      <p style="font-size:15px;line-height:1.7;color:#B9B4A9;margin:0">All 5 courses · $79 to start · 3 months included · then $12.99/mo</p>
-      <a href="#top" class="hov-ghost" style="margin-top:auto;text-align:center;border:1px solid #242A38;color:#F2EEE4;font-weight:600;font-size:15px;padding:12px 24px;border-radius:999px">Get everything</a>
+      <p style="font-size:15px;line-height:1.7;color:#B9B4A9;margin:0">All 5 courses · $99 to start · 3 months included · then $12.99/mo — just $3 more than a single course</p>
+      <a href="https://buy.stripe.com/8x2cN515hbyQ3e2eYpfw40a" class="hov-ghost" style="margin-top:auto;text-align:center;border:1px solid #242A38;color:#F2EEE4;font-weight:600;font-size:15px;padding:12px 24px;border-radius:999px">Get everything</a>
     </div>
   </div>
   <p style="font-size:13.5px;color:#8a8f9d;margin:20px 0 0">Brasil: pagamento em até 12x via Pix ou boleto.</p>
@@ -313,7 +330,7 @@
 
 <!-- FINAL CTA -->
 <section style="position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0"><div class="slot" data-slot="cta-bg" aria-hidden="true"></div></div>
+  <div style="position:absolute;inset:0"><div class="slot photo" data-slot="cta-bg" style="background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260718_151409_55618bfe-99c7-4a33-9c16-eda7c2352113_min.webp')" aria-hidden="true"></div></div>
   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,17,23,.82),rgba(15,17,23,.68));pointer-events:none"></div>
   <div style="position:relative;max-width:1200px;margin:0 auto;padding:110px 32px;display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center;pointer-events:none">
     <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(32px,4vw,50px);margin:0;text-wrap:pretty">Your first lesson takes 5 minutes.</h2>
