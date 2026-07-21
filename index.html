@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dirk Ahlborn — Learn to build with AI. From the founder of Hyperloop TT.</title>
-<meta name="description" content="Duolingo-style courses taught by Hyperloop TT founder Dirk Ahlborn: AI in Practice and Startup Founder — with a real AI workspace and founder tools included.">
+<meta name="description" content="Bite-size, gamified courses taught by Hyperloop TT founder Dirk Ahlborn: AI in Practice and Startup Founder — with a real AI workspace and founder tools included.">
 <style>
   :root{
     --bg:#0b0d12; --panel:#12151d; --panel2:#181c27; --border:#242a38;
@@ -56,6 +56,16 @@
   .quoteband span{color:var(--muted);font-size:14px}
   footer{border-top:1px solid var(--border);padding:34px 0 50px;color:var(--muted);font-size:13.5px}
   footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  @media(max-width:640px){
+    nav{flex-wrap:wrap;gap:12px}
+    nav .links{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+    nav .links a{margin-left:0;font-size:14px}
+    header.hero{padding:40px 0 28px;gap:28px}
+    .sub{font-size:16.5px}
+    .btn{padding:13px 22px;font-size:15px}
+    .btn.ghost{margin-left:8px}
+    section{padding:36px 0}
+  }
 </style>
 </head>
 <body>
@@ -74,11 +84,19 @@
     <div>
       <div class="kicker">Founder of Hyperloop TT · Now teaching</div>
       <h1>Learn to build.<br>From someone who <em>actually built</em>.</h1>
-      <p class="sub">Two courses, taught the way Duolingo teaches languages — bite-size, gamified, daily. Master AI as a practical skill, or take a startup from zero to funded. With real tools included, not just videos.</p>
+      <p class="sub">Two courses in bite-size, gamified daily lessons. Master AI as a practical skill, or take a startup from zero to funded. With real tools included, not just videos.</p>
       <a class="btn" href="#courses">See the courses</a>
       <a class="btn ghost" href="#about">Who is Dirk?</a>
     </div>
-    <div class="portrait">[ Portrait photo of Dirk — drop in assets/dirk.jpg ]</div>
+    <div class="portrait">
+      <!-- To use a real photo: replace the inner block with <img src="/assets/dirk.jpg" alt="Dirk Ahlborn" style="width:100%;height:100%;object-fit:cover;border-radius:14px"> -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+        <div style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#e8863d);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:32px;color:#0b0d12">DA</div>
+        <div style="font-size:20px;font-weight:700;color:#eef0f6">Dirk Ahlborn</div>
+        <div style="font-size:13.5px">Founder &amp; CEO, Hyperloop TT</div>
+        <div style="font-size:13.5px">Keynote speaker in 40+ countries</div>
+      </div>
+    </div>
   </header>
 
   <div class="cred">
@@ -124,7 +142,7 @@
     <p class="lead">Buying a course here doesn't get you a folder of videos. It gets you working infrastructure.</p>
     <div class="perk"><div class="ico">🤖</div><div><h4>Your own AI workspace (chat.dirk.it)</h4><p>A private, full-featured AI chat with curated frontier models and weekly credits included — no API keys, no setup. Lessons end with "now do it live," and you actually can.</p></div></div>
     <div class="perk"><div class="ico">🗄️</div><div><h4>Vault — founder tools</h4><p>Build your business plan, financial story, and pitch materials in a structured tool as you move through the course. Walk out with documents you can put in front of investors.</p></div></div>
-    <div class="perk"><div class="ico">📱</div><div><h4>The app that keeps you going</h4><p>Streaks, XP, missions, spaced repetition. The reason people finish these courses is the same reason people finish Duolingo trees.</p></div></div>
+    <div class="perk"><div class="ico">📱</div><div><h4>The app that keeps you going</h4><p>Streaks, XP, missions, spaced repetition — the mechanics that turn showing up into a habit, so you actually reach the last masterclass.</p></div></div>
   </section>
 
   <section id="about">
