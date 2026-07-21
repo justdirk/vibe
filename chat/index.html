@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dirk.it AI — LLM &amp; app builder</title>
+<meta name="description" content="dirk.it AI — an LLM assistant and app builder by Dirk Ahlborn. Included with the AI in Practice course.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#0A0A09}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#F2EFE9;-webkit-font-smoothing:antialiased}
+  a{color:#E0B15C;text-decoration:none}
+  a:hover{color:#F2EFE9}
+  ::selection{background:#E0B15C;color:#0A0A09}
+  .sig{font-family:'Mrs Saint Delafield',cursive;font-weight:400;color:#F2EFE9;line-height:1;transform:rotate(-2deg);display:inline-block}
+  nav.top{display:flex;align-items:center;justify-content:space-between;padding:28px 56px;border-bottom:1px solid rgba(242,239,233,.1);position:sticky;top:0;background:rgba(10,10,9,.85);backdrop-filter:blur(12px);z-index:10;gap:16px;flex-wrap:wrap}
+  nav.top .links{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+  nav.top .links a{font-size:14px;font-weight:500;color:#9B958A}
+  nav.top .links a:hover{color:#F2EFE9}
+  nav.top .links a.on{color:#F2EFE9}
+  nav.top .links a.ai{font-weight:600;color:#E0B15C}
+  nav.top .links a.cta{font-weight:600;color:#0A0A09;background:#E0B15C;padding:10px 22px;border-radius:2px}
+  nav.top .links a.cta:hover{background:#F2EFE9;color:#0A0A09}
+  .btnGold{font-size:15px;font-weight:600;color:#0A0A09;background:#E0B15C;padding:16px 32px;border-radius:2px;display:inline-block}
+  .btnGold:hover{background:#F2EFE9;color:#0A0A09}
+  .btnGhost{font-size:15px;font-weight:600;color:#F2EFE9;border:1px solid rgba(242,239,233,.35);padding:15px 32px;border-radius:2px;display:inline-block}
+  .btnGhost:hover{border-color:#E0B15C;color:#E0B15C}
+  .g2{display:grid;grid-template-columns:1fr 1fr}
+  footer.site{border-top:1px solid rgba(242,239,233,.1);padding:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  @media(max-width:900px){
+    nav.top{padding:16px 20px}
+    nav.top .links{gap:12px 18px}
+    nav.top .sig{font-size:28px !important}
+    .g2{grid-template-columns:1fr !important;gap:40px !important}
+    .padx{padding-left:20px !important;padding-right:20px !important}
+    footer.site{padding:40px 20px}
+    .stats4{grid-template-columns:1fr 1fr !important}
+    .cell{padding:32px 24px !important}
+  }
+  @media(max-width:540px){.stats4{grid-template-columns:1fr !important}}
+</style>
+
+<style>
+  .chatwrap{flex:1;min-height:0;display:flex;flex-direction:column;max-width:860px;width:100%;margin:0 auto;padding:0 32px;box-sizing:border-box}
+  @media(max-width:900px){.chatwrap{padding:0 16px}}
+</style>
+</head>
+<body>
+<div style="height:100vh;display:flex;flex-direction:column;background:#0A0A09;color:#F2EFE9;box-sizing:border-box">
+  <nav class="top" style="flex:none;position:static">
+    <a href="/" class="sig" style="font-size:34px">Dirk Ahlborn</a>
+    <div class="links">
+      <a href="/courses/">Courses</a>
+      <a href="/speaking/">Speaking</a>
+      <a href="/about/">About</a>
+      <a href="/chat/" class="ai on" style="color:#F2EFE9">dirk.it AI</a>
+      <a href="/courses/" class="cta">Enroll</a>
+    </div>
+  </nav>
+  <div class="chatwrap">
+    <div style="display:flex;align-items:baseline;gap:14px;padding:36px 4px 20px;flex:none">
+      <h1 style="font-size:28px;font-weight:600;margin:0">dirk.it <span style="color:#E0B15C">AI</span></h1>
+      <span style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#9B958A">LLM &amp; app builder</span>
+    </div>
+    <div id="scroll" style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:14px;padding:8px 4px">
+      <div style="align-self:flex-start;background:rgba(242,239,233,.08);color:#F2EFE9;padding:12px 16px;border-radius:8px;max-width:75%;font-size:15px;line-height:1.55;white-space:pre-wrap">This is dirk.it AI — ask me anything, or try me as your app-building copilot.</div>
+    </div>
+    <div style="display:flex;gap:12px;padding:18px 4px 32px;flex:none">
+      <input id="inp" placeholder="Ask anything — or describe the app you want to build…" style="flex:1;background:#141311;border:1px solid rgba(242,239,233,.15);border-radius:6px;color:#F2EFE9;font-size:15px;padding:14px 16px;outline:none;font-family:inherit">
+      <button id="send" style="background:#E0B15C;color:#0A0A09;border:0;border-radius:6px;font-size:15px;font-weight:600;padding:0 26px;cursor:pointer;font-family:inherit">Send</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var scroll=document.getElementById('scroll'),inp=document.getElementById('inp'),btn=document.getElementById('send');
+  function add(text,me){
+    var d=document.createElement('div');
+    d.style.cssText='padding:12px 16px;border-radius:8px;max-width:75%;font-size:15px;line-height:1.55;white-space:pre-wrap;'+(me?'align-self:flex-end;background:#E0B15C;color:#0A0A09':'align-self:flex-start;background:rgba(242,239,233,.08);color:#F2EFE9');
+    d.textContent=text;scroll.appendChild(d);scroll.scrollTop=scroll.scrollHeight;return d;
+  }
+  function send(){
+    var t=inp.value.trim();if(!t)return;
+    add(t,true);inp.value='';
+    setTimeout(function(){
+      var m=add("The full dirk.it AI workspace goes live with the AI in Practice course — every student gets access included, with real frontier models and weekly credits at chat.dirk.it.\n\nUntil then: the first lessons of both courses are free in the app — or enroll now at dirk.it/courses/.",false);
+      var a=document.createElement('a');a.href='/courses/';a.textContent='View the courses →';a.style.cssText='align-self:flex-start;color:#E0B15C;font-weight:600;font-size:15px;padding:2px 4px';scroll.appendChild(a);scroll.scrollTop=scroll.scrollHeight;
+    },500);
+  }
+  btn.addEventListener('click',send);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')send();});
+})();
+</script>
+</body>
+</html>
