@@ -1,164 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dirk Ahlborn — Learn to build with AI. From the founder of Hyperloop TT.</title>
-<meta name="description" content="Bite-size, gamified courses taught by Hyperloop TT founder Dirk Ahlborn: AI in Practice and Startup Founder — with a real AI workspace and founder tools included.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dirk Ahlborn — Entrepreneurship can be learned</title>
+<meta name="description" content="Thirty years of building companies — from Berlin banking to Hyperloop. Courses, keynotes, and the exact playbook: how to start, build, and earn in the age of AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0b0d12; --panel:#12151d; --panel2:#181c27; --border:#242a38;
-    --text:#eef0f6; --muted:#98a0b3; --accent:#f59e0b; --accent2:#6ea8fe;
-    --green:#4ade80; --radius:14px;
+  html,body{margin:0;padding:0;background:#0A0A09}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#F2EFE9;-webkit-font-smoothing:antialiased}
+  a{color:#E0B15C;text-decoration:none}
+  a:hover{color:#F2EFE9}
+  ::selection{background:#E0B15C;color:#0A0A09}
+  .sig{font-family:'Mrs Saint Delafield',cursive;font-weight:400;color:#F2EFE9;line-height:1;transform:rotate(-2deg);display:inline-block}
+  nav.top{display:flex;align-items:center;justify-content:space-between;padding:28px 56px;border-bottom:1px solid rgba(242,239,233,.1);position:sticky;top:0;background:rgba(10,10,9,.85);backdrop-filter:blur(12px);z-index:10;gap:16px;flex-wrap:wrap}
+  nav.top .links{display:flex;align-items:center;gap:36px;flex-wrap:wrap}
+  nav.top .links a{font-size:14px;font-weight:500;color:#9B958A}
+  nav.top .links a:hover{color:#F2EFE9}
+  nav.top .links a.on{color:#F2EFE9}
+  nav.top .links a.ai{font-weight:600;color:#E0B15C}
+  nav.top .links a.cta{font-weight:600;color:#0A0A09;background:#E0B15C;padding:10px 22px;border-radius:2px}
+  nav.top .links a.cta:hover{background:#F2EFE9;color:#0A0A09}
+  .btnGold{font-size:15px;font-weight:600;color:#0A0A09;background:#E0B15C;padding:16px 32px;border-radius:2px;display:inline-block}
+  .btnGold:hover{background:#F2EFE9;color:#0A0A09}
+  .btnGhost{font-size:15px;font-weight:600;color:#F2EFE9;border:1px solid rgba(242,239,233,.35);padding:15px 32px;border-radius:2px;display:inline-block}
+  .btnGhost:hover{border-color:#E0B15C;color:#E0B15C}
+  .g2{display:grid;grid-template-columns:1fr 1fr}
+  footer.site{border-top:1px solid rgba(242,239,233,.1);padding:56px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  @media(max-width:900px){
+    nav.top{padding:16px 20px}
+    nav.top .links{gap:12px 18px}
+    nav.top .sig{font-size:28px !important}
+    .g2{grid-template-columns:1fr !important;gap:40px !important}
+    .padx{padding-left:20px !important;padding-right:20px !important}
+    footer.site{padding:40px 20px}
+    .stats4{grid-template-columns:1fr 1fr !important}
+    .cell{padding:32px 24px !important}
   }
-  *{box-sizing:border-box} html{scroll-behavior:smooth}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  a{color:var(--accent2);text-decoration:none}
-  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
-  .logo{font-weight:800;font-size:20px;color:var(--text)}
-  .logo span{color:var(--accent)}
-  nav .links a{color:var(--muted);margin-left:22px;font-size:14.5px}
-  nav .links a.cta{color:#0b0d12;background:var(--accent);padding:9px 16px;border-radius:999px;font-weight:700}
-  header.hero{padding:64px 0 40px;display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}
-  @media(max-width:760px){header.hero{grid-template-columns:1fr}}
-  .kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:14px}
-  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 18px;font-weight:800}
-  h1 em{color:var(--accent);font-style:normal}
-  .sub{color:var(--muted);font-size:18px;margin:0 0 26px;max-width:34em}
-  .btn{display:inline-block;background:var(--accent);color:#0b0d12;font-weight:700;padding:14px 26px;border-radius:999px;font-size:16px}
-  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:10px}
-  .portrait{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);min-height:280px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-align:center;padding:20px}
-  .cred{display:flex;flex-wrap:wrap;gap:10px;padding:10px 0 34px}
-  .cred span{border:1px solid var(--border);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--muted)}
-  .cred b{color:var(--text)}
-  section{padding:46px 0}
-  h2{font-size:28px;margin:0 0 8px}
-  .lead{color:var(--muted);margin:0 0 28px;max-width:44em}
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  @media(max-width:760px){.cards{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
-  .card .tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
-  .card h3{margin:0 0 8px;font-size:21px}
-  .card p{color:var(--muted);font-size:15px;margin:0 0 16px}
-  .card ul{margin:0 0 20px;padding-left:18px;color:var(--muted);font-size:14.5px}
-  .card ul li{margin-bottom:6px}
-  .card .price{margin-top:auto;font-size:15px;color:var(--muted)}
-  .card .price b{color:var(--text);font-size:22px}
-  .card .price s{opacity:.6}
-  .card .btn{margin-top:14px;text-align:center}
-  .perk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
-  .perk .ico{font-size:24px;line-height:1;margin-top:3px}
-  .perk h4{margin:0 0 4px;font-size:16px}
-  .perk p{margin:0;color:var(--muted);font-size:14.5px}
-  .quoteband{border-left:3px solid var(--accent);padding:8px 0 8px 22px;margin:12px 0 0}
-  .quoteband p{font-size:19px;font-style:italic;color:var(--text);margin:0 0 6px}
-  .quoteband span{color:var(--muted);font-size:14px}
-  footer{border-top:1px solid var(--border);padding:34px 0 50px;color:var(--muted);font-size:13.5px}
-  footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px}
-  @media(max-width:640px){
-    nav{flex-wrap:wrap;gap:12px}
-    nav .links{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
-    nav .links a{margin-left:0;font-size:14px}
-    header.hero{padding:40px 0 28px;gap:28px}
-    .sub{font-size:16.5px}
-    .btn{padding:13px 22px;font-size:15px}
-    .btn.ghost{margin-left:8px}
-    section{padding:36px 0}
-  }
+  @media(max-width:540px){.stats4{grid-template-columns:1fr !important}}
 </style>
+
 </head>
 <body>
-<div class="wrap">
-  <nav>
-    <div class="logo">dirk<span>.it</span></div>
+<div style="min-height:100vh;background:#0A0A09;color:#F2EFE9">
+  <nav class="top">
+    <a href="/" class="sig" style="font-size:34px">Dirk Ahlborn</a>
     <div class="links">
-      <a href="/ai/">AI Course</a>
-      <a href="/founder/">Founder Course</a>
-      <a href="#about">About</a>
-      <a class="cta" href="#courses">Start learning</a>
+      <a href="/courses/">Courses</a>
+      <a href="/speaking/">Speaking</a>
+      <a href="/about/">About</a>
+      <a href="/chat/" class="ai">dirk.it AI</a>
+      <a href="/courses/" class="cta">Enroll</a>
     </div>
   </nav>
 
-  <header class="hero">
-    <div>
-      <div class="kicker">Founder of Hyperloop TT · Now teaching</div>
-      <h1>Learn to build.<br>From someone who <em>actually built</em>.</h1>
-      <p class="sub">Two courses in bite-size, gamified daily lessons. Master AI as a practical skill, or take a startup from zero to funded. With real tools included, not just videos.</p>
-      <a class="btn" href="#courses">See the courses</a>
-      <a class="btn ghost" href="#about">Who is Dirk?</a>
-    </div>
-    <div class="portrait">
-      <!-- To use a real photo: replace the inner block with <img src="/assets/dirk.jpg" alt="Dirk Ahlborn" style="width:100%;height:100%;object-fit:cover;border-radius:14px"> -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
-        <div style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#e8863d);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:32px;color:#0b0d12">DA</div>
-        <div style="font-size:20px;font-weight:700;color:#eef0f6">Dirk Ahlborn</div>
-        <div style="font-size:13.5px">Founder &amp; CEO, Hyperloop TT</div>
-        <div style="font-size:13.5px">Keynote speaker in 40+ countries</div>
-      </div>
-    </div>
-  </header>
-
-  <div class="cred">
-    <span><b>Founder &amp; CEO</b> · Hyperloop TT</span>
-    <span><b>Wikipedia</b> · Dirk Ahlborn</span>
-    <span><b>Keynote speaker</b> · 40+ countries</span>
-    <span><b>Featured by</b> Bosch, global media</span>
-  </div>
-
-  <section id="courses">
-    <h2>The courses</h2>
-    <p class="lead">Not video libraries you abandon after lesson three. Structured like a game: streaks, XP, missions — and every lesson ends with you <i>doing</i> the thing, live, in real tools.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="tag">13 Masterclasses · App + AI Workspace</div>
-        <h3>AI in Practice: Create, Work, and Earn</h3>
-        <p>From prompting to shipping paid work: writing, images, video, voice, websites without code, automation — ending with your first paid AI gig.</p>
-        <ul>
-          <li>Learn in the app, practice in <b>your own AI workspace</b> at chat.dirk.it — real frontier models, included</li>
-          <li>Build a portfolio as you go: every masterclass produces something real</li>
-          <li>Finale: "Launch: Your First Paid AI Gig"</li>
-        </ul>
-        <div class="price"><b>$79</b> to start · 3 months included · then $20/mo</div>
-        <a class="btn" href="/ai/">Explore the AI course →</a>
-      </div>
-      <div class="card">
-        <div class="tag">14 Masterclasses · App + Founder Tools</div>
-        <h3>Startup Founder: Zero to Funded</h3>
-        <p>The complete founder journey — idea, validation, business model, product in the AI era, go-to-market, fundraising, the hard things, scale.</p>
-        <ul>
-          <li>Taught by someone who raised, built, and led a company you've heard of</li>
-          <li>Includes <b>Vault</b>: build your business plan and pitch materials as you learn</li>
-          <li>AI sparring partners: pitch coach, investor-objection trainer</li>
-        </ul>
-        <div class="price"><b>$129</b> to start · 3 months included · then $20/mo</div>
-        <a class="btn" href="/founder/">Explore the Founder course →</a>
+  <section style="position:relative;min-height:640px">
+    <div style="position:absolute;inset:0;background-image:url('https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg');background-size:cover;background-position:center 20%"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to left, rgba(10,10,9,0.92) 0%, rgba(10,10,9,0.65) 40%, rgba(10,10,9,0.1) 72%, transparent);pointer-events:none"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,9,0.85), transparent 40%);pointer-events:none"></div>
+    <div class="padx" style="position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:28px;min-height:640px;padding:96px 56px 72px;max-width:1440px;margin:0 auto;box-sizing:border-box;pointer-events:none">
+      <div style="margin-left:auto;max-width:620px;display:flex;flex-direction:column;gap:28px;min-width:0">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">Founder · HyperloopTT &amp; JumpStarter</div>
+        <h1 style="font-weight:500;font-size:clamp(48px,6vw,88px);line-height:1.0;margin:0;letter-spacing:-0.01em;text-wrap:balance;max-width:14ch;text-shadow:0 2px 32px rgba(10,10,9,0.6)">Entrepreneurship <em style="color:#E0B15C;font-style:normal">can be learned.</em></h1>
+        <p style="font-size:20px;line-height:1.55;color:#C9C4B9;margin:0;max-width:46ch;text-wrap:pretty;text-shadow:0 1px 16px rgba(10,10,9,0.7)">Thirty years of building companies — from Berlin banking to Hyperloop. Now I teach the exact playbook: how to start, build, and earn in the age of AI.</p>
+        <div style="display:flex;gap:16px;margin-top:8px;pointer-events:auto;flex-wrap:wrap">
+          <a href="/courses/" class="btnGold">View the courses</a>
+          <a href="/speaking/" class="btnGhost">Book a keynote</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>More than a course — a toolkit</h2>
-    <p class="lead">Buying a course here doesn't get you a folder of videos. It gets you working infrastructure.</p>
-    <div class="perk"><div class="ico">🤖</div><div><h4>Your own AI workspace (chat.dirk.it)</h4><p>A private, full-featured AI chat with curated frontier models and weekly credits included — no API keys, no setup. Lessons end with "now do it live," and you actually can.</p></div></div>
-    <div class="perk"><div class="ico">🗄️</div><div><h4>Vault — founder tools</h4><p>Build your business plan, financial story, and pitch materials in a structured tool as you move through the course. Walk out with documents you can put in front of investors.</p></div></div>
-    <div class="perk"><div class="ico">📱</div><div><h4>The app that keeps you going</h4><p>Streaks, XP, missions, spaced repetition — the mechanics that turn showing up into a habit, so you actually reach the last masterclass.</p></div></div>
-  </section>
-
-  <section id="about">
-    <h2>About Dirk</h2>
-    <p class="lead">Dirk Ahlborn is the founder and CEO of Hyperloop Transportation Technologies, the company that took Elon Musk's hyperloop concept and turned it into a global engineering effort powered by a crowd of contributors — one of the boldest experiments in how companies get built. He has spoken on innovation and entrepreneurship in over 40 countries, and now runs restaurants and builds software in Brazil.</p>
-    <div class="quoteband">
-      <p>"The best way to predict whether you can build something is to have built something improbable before."</p>
-      <span>Why these courses exist: to teach building — by someone who builds.</span>
+  <section class="padx" style="border-top:1px solid rgba(242,239,233,.1);border-bottom:1px solid rgba(242,239,233,.1);padding:28px 56px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:24px 32px;max-width:1328px;margin:0 auto;flex-wrap:wrap">
+      <span style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#5E594F">As seen at</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">Forbes</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">World Economic Forum</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">SXSW</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">CES</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">Bloomberg</span>
+      <span style="font-weight:500;font-size:20px;color:#9B958A">Harvard Business School</span>
     </div>
   </section>
 
-  <footer>
-    <div class="cols">
-      <div>© 2026 Dirk Ahlborn · dirk.it</div>
-      <div><a href="/ai/">AI in Practice</a> · <a href="/founder/">Zero to Funded</a> · <a href="mailto:mail@dirk.it">Contact</a></div>
+  <section class="stats4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(242,239,233,.1);border-bottom:1px solid rgba(242,239,233,.1)">
+    <div class="cell" style="background:#0A0A09;padding:48px 56px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-weight:500;font-size:48px;color:#E0B15C">80+</div>
+      <div style="font-size:14px;color:#9B958A">Keynotes worldwide — WEF, SXSW, CES</div>
     </div>
+    <div class="cell" style="background:#0A0A09;padding:48px 56px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-weight:500;font-size:48px;color:#E0B15C">2</div>
+      <div style="font-size:14px;color:#9B958A">Harvard Business School case studies on my business model</div>
+    </div>
+    <div class="cell" style="background:#0A0A09;padding:48px 56px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-weight:500;font-size:48px;color:#E0B15C">800+</div>
+      <div style="font-size:14px;color:#9B958A">Contributors led across 40 countries at HyperloopTT</div>
+    </div>
+    <div class="cell" style="background:#0A0A09;padding:48px 56px;display:flex;flex-direction:column;gap:8px">
+      <div style="font-weight:500;font-size:48px;color:#E0B15C">30</div>
+      <div style="font-size:14px;color:#9B958A">Years founding and exiting companies on two continents</div>
+    </div>
+  </section>
+
+  <section class="padx" style="padding:104px 56px;max-width:1440px;margin:0 auto;box-sizing:border-box">
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:56px;gap:24px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">Courses</div>
+        <h2 style="font-weight:500;font-size:clamp(34px,4vw,52px);line-height:1.05;margin:0;max-width:18ch">Learn from someone who has actually done it.</h2>
+      </div>
+      <a href="/courses/" style="font-size:15px;font-weight:600;white-space:nowrap">All courses →</a>
+    </div>
+    <div class="g2" style="gap:32px">
+      <a href="/courses/#ai" style="display:flex;flex-direction:column;border:1px solid rgba(242,239,233,.12);color:#F2EFE9;background:#121110">
+        <div style="height:280px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260717_234626_09a8cede-a5bf-45a3-8add-0916cc79e323.png');background-size:cover;background-position:center"></div>
+        <div style="padding:36px;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#E0B15C">Course 01</div>
+          <div style="font-weight:500;font-size:clamp(26px,3vw,34px);line-height:1.1">AI in Practice: Create, Work, and Earn</div>
+          <p style="font-size:16px;line-height:1.55;color:#9B958A;margin:0">Stop reading about AI. Use it to produce work, launch products, and generate income — this week, not someday.</p>
+          <div style="font-size:15px;font-weight:600;color:#E0B15C;margin-top:6px">$79 to start · Enroll →</div>
+        </div>
+      </a>
+      <a href="/courses/#founder" style="display:flex;flex-direction:column;border:1px solid rgba(242,239,233,.12);color:#F2EFE9;background:#121110">
+        <div style="height:280px;background-image:url('https://d8j0ntlcm91z4.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/hf_20260717_234633_d9e32d49-6617-4d03-9c9b-8439cad7e923.png');background-size:cover;background-position:center"></div>
+        <div style="padding:36px;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#E0B15C">Course 02</div>
+          <div style="font-weight:500;font-size:clamp(26px,3vw,34px);line-height:1.1">Startup Founder: Zero to Funded</div>
+          <p style="font-size:16px;line-height:1.55;color:#9B958A;margin:0">The full path from idea to funded, launched company — the same process that built HyperloopTT from a forum post.</p>
+          <div style="font-size:15px;font-weight:600;color:#E0B15C;margin-top:6px">$129 to start · Enroll →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="padx" style="border-top:1px solid rgba(242,239,233,.1);padding:104px 56px">
+    <div class="g2" style="grid-template-columns:0.8fr 1.2fr;gap:72px;align-items:center;max-width:1440px;margin:0 auto">
+      <div style="min-height:340px;background-image:url('https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/5d8b92fb-e2cb-403e-8a70-ffab7a9242b7.jpg');background-size:contain;background-repeat:no-repeat;background-position:center"></div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">About</div>
+        <h2 style="font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08;margin:0">No theory. Thirty years of building.</h2>
+        <p style="font-size:18px;line-height:1.6;color:#9B958A;margin:0;text-wrap:pretty">I quit a Berlin bank at 19. Built and sold companies in Italy. Then took an open idea from a whitepaper and turned it into Hyperloop Transportation Technologies — 800 people, 40 countries, government partnerships, two Harvard case studies. Everything I teach comes from doing it.</p>
+        <a href="/about/" style="font-size:15px;font-weight:600">Read the full story →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="padx" style="border-top:1px solid rgba(242,239,233,.1);padding:96px 56px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:24px">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">Speaking</div>
+    <h2 style="font-weight:500;font-size:clamp(32px,4vw,48px);line-height:1.08;margin:0;max-width:22ch">Keynotes that make rooms stand up.</h2>
+    <p style="font-size:17px;line-height:1.6;color:#9B958A;margin:0;max-width:56ch">Innovation, the future of transport, and building companies with crowds — delivered on 80+ stages from Davos to Austin.</p>
+    <a href="/speaking/" class="btnGhost" style="margin-top:8px">Speaking &amp; booking</a>
+  </section>
+
+  <footer class="site">
+    <div class="sig" style="font-size:30px">Dirk Ahlborn</div>
+    <div style="display:flex;gap:28px;flex-wrap:wrap">
+      <a href="/courses/" style="font-size:14px;color:#9B958A">Courses</a>
+      <a href="/speaking/" style="font-size:14px;color:#9B958A">Speaking</a>
+      <a href="/about/" style="font-size:14px;color:#9B958A">About</a>
+      <a href="/culinaris/" style="font-size:14px;color:#9B958A">Culinaris</a>
+    </div>
+    <div style="font-size:13px;color:#5E594F">© 2026 Dirk Ahlborn · <a href="/" style="color:#E0B15C">dirk.it</a></div>
   </footer>
 </div>
 </body>
