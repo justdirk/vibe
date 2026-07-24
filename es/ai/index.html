@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA en la Práctica: Crear, Trabajar y Ganar — impartido por Dirk Ahlborn</title>
+<meta name="description" content="13 masterclasses que convierten la IA en una habilidad práctica — textos, imágenes, vídeo, voz, apps no-code, automatización — y terminan con tu primer encargo pagado con IA. Incluye tu propio espacio de IA.">
+<style>
+  :root{
+    --bg:#0b0d12; --panel:#12151d; --panel2:#181c27; --border:#242a38;
+    --text:#eef0f6; --muted:#98a0b3; --accent:#6ea8fe; --gold:#f59e0b;
+    --green:#4ade80; --radius:14px;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent);text-decoration:none}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .logo{font-weight:800;font-size:20px;color:var(--text)}
+  .logo span{color:var(--gold)}
+  nav a.back{color:var(--muted);font-size:14.5px}
+  header{padding:56px 0 30px;text-align:left;max-width:760px}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:14px}
+  h1{font-size:clamp(28px,4.6vw,42px);line-height:1.14;margin:0 0 16px;font-weight:800}
+  .sub{color:var(--muted);font-size:17.5px;margin:0 0 26px}
+  .btn{display:inline-block;background:var(--accent);color:#0b0d12;font-weight:700;padding:14px 28px;border-radius:999px;font-size:16px;border:0;cursor:pointer}
+  .btn.gold{background:var(--gold)}
+  .pricebox{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:8px 0 10px}
+  .pricebox .p b{font-size:30px} .pricebox .p s{color:var(--muted);margin-left:8px}
+  .pricebox .p div{color:var(--muted);font-size:13.5px}
+  .note{color:var(--muted);font-size:13px;margin-bottom:26px}
+  section{padding:38px 0}
+  h2{font-size:26px;margin:0 0 6px}
+  .lead{color:var(--muted);margin:0 0 24px;max-width:44em}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .mc{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+  .mc .n{color:var(--accent);font-weight:800;font-size:14px;min-width:26px;padding-top:2px}
+  .mc div h4{margin:0;font-size:15.5px;font-weight:650}
+  .free{border-color:var(--green)}
+  .free .n{color:var(--green)}
+  .freetag{font-size:11px;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:2px}
+  .perk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+  .perk .ico{font-size:24px;line-height:1;margin-top:3px}
+  .perk h4{margin:0 0 4px;font-size:16px}
+  .perk p{margin:0;color:var(--muted);font-size:14.5px}
+  .faq{border-top:1px solid var(--border)}
+  details{border-bottom:1px solid var(--border);padding:14px 4px}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px}
+  details p{color:var(--muted);font-size:14.5px;margin:10px 0 4px}
+  footer{border-top:1px solid var(--border);padding:30px 0 46px;color:var(--muted);font-size:13.5px;margin-top:30px}
+</style>
+<!-- SEO:start -->
+<link rel="canonical" href="https://dirk.it/es/ai/">
+<link rel="alternate" hreflang="en" href="https://dirk.it/ai/">
+<link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/">
+<link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/">
+<link rel="alternate" hreflang="pt-BR" href="https://dirk.it/pt/ai/">
+<link rel="alternate" hreflang="it" href="https://dirk.it/it/ai/">
+<link rel="alternate" hreflang="x-default" href="https://dirk.it/ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dirk Ahlborn">
+<meta property="og:title" content="IA en la Práctica: Crear, Trabajar y Ganar — impartido por Dirk Ahlborn">
+<meta property="og:description" content="13 masterclasses que convierten la IA en una habilidad práctica — textos, imágenes, vídeo, voz, apps no-code, automatización — y terminan con tu primer encargo pagado con IA. Incluye tu propio espacio de IA.">
+<meta property="og:url" content="https://dirk.it/es/ai/">
+<meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IA en la Práctica: Crear, Trabajar y Ganar — impartido por Dirk Ahlborn">
+<meta name="twitter:description" content="13 masterclasses que convierten la IA en una habilidad práctica — textos, imágenes, vídeo, voz, apps no-code, automatización — y terminan con tu primer encargo pagado con IA. Incluye tu propio espacio de IA.">
+<meta name="twitter:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"AI in Practice: Create, Work, and Earn","description":"13 masterclasses que convierten la IA en una habilidad práctica — textos, imágenes, vídeo, voz, apps no-code, automatización — y terminan con tu primer encargo pagado con IA. Incluye tu propio espacio de IA.","url":"https://dirk.it/es/ai/","inLanguage":"es","provider":{"@type":"Person","name":"Dirk Ahlborn","url":"https://dirk.it/"},"offers":{"@type":"Offer","price":"79","priceCurrency":"USD","category":"Paid","url":"https://dirk.it/es/ai/","availability":"https://schema.org/InStock"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dirk Ahlborn","item":"https://dirk.it/es/"},{"@type":"ListItem","position":2,"name":"IA en la Práctica: Crear, Trabajar y Ganar","item":"https://dirk.it/es/ai/"}]}]}</script>
+<!-- SEO:end -->
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">dirk<span>.it</span></div>
+    <a class="back" href="/es/">← Todos los cursos</a>
+  </nav>
+
+  <header>
+    <div class="kicker">13 masterclasses · App + espacio de IA · Impartido por Dirk Ahlborn</div>
+    <h1>IA en la Práctica:<br>Crear, Trabajar y Ganar</h1>
+    <p class="sub">Deja de ver cómo la IA les pasa a los demás. En 13 masterclasses prácticas escribirás, diseñarás, construirás y automatizarás — y terminarás consiguiendo tu primer trabajo pagado con IA. Lecciones breves, rachas y una misión en cada paso.</p>
+    <div class="pricebox">
+      <div class="p"><b>$79</b> <span style="font-size:15px;color:var(--muted)">para empezar</span><div>Precio de lanzamiento · incluye 3 meses de todo · luego $20/mes · cancela cuando quieras</div></div>
+      <!-- CHECKOUT: replace href with Stripe payment link -->
+      <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Consigue el curso</a>
+    </div>
+    <p class="note">Brasil: pago en hasta 12 cuotas vía Pix/boleto — <a href="#" data-checkout="hotmart_ai">comprar en reales</a>. Las primeras lecciones son gratis en la app — pruébalo antes de comprar.</p>
+  </header>
+
+  <section>
+    <h2>Qué incluye</h2>
+    <p class="lead">Cada masterclass produce algo real — un texto, un set de imágenes, un vídeo, un sitio que funciona. Al llegar al final tienes un portafolio y un playbook.</p>
+    <div class="grid">
+      <div class="mc free"><div class="n">1</div><div><h4>Tu Kit de Inicio con IA: Lo Que la IA Puede Hacer por Ti Hoy<span class="freetag">GRATIS</span></h4></div></div>
+      <div class="mc free"><div class="n">2</div><div><h4>Prompting: La Habilidad Detrás de Cada Herramienta<span class="freetag">GRATIS</span></h4></div></div>
+      <div class="mc"><div class="n">3</div><div><h4>Escribir con IA: De los Correos a los Ebooks</h4></div></div>
+      <div class="mc"><div class="n">4</div><div><h4>Imágenes: Crea Visuales por los Que la Gente Paga</h4></div></div>
+      <div class="mc"><div class="n">5</div><div><h4>Vídeo: Del Texto a las Imágenes en Movimiento</h4></div></div>
+      <div class="mc"><div class="n">6</div><div><h4>Música: Compón Canciones Completas Sin un Instrumento</h4></div></div>
+      <div class="mc"><div class="n">7</div><div><h4>Voz: Narración, Tu Clon y Podcasts</h4></div></div>
+      <div class="mc"><div class="n">8</div><div><h4>Presentaciones: Diapositivas Que Hablan por Ti</h4></div></div>
+      <div class="mc"><div class="n">9</div><div><h4>Webs y Apps: Construye Sin Código</h4></div></div>
+      <div class="mc"><div class="n">10</div><div><h4>Automatización: Trabajo Que Corre Mientras Duermes</h4></div></div>
+      <div class="mc"><div class="n">11</div><div><h4>Marketing: El Motor de Contenido con IA</h4></div></div>
+      <div class="mc"><div class="n">12</div><div><h4>E-Commerce: Vende Productos con un Stack de IA</h4></div></div>
+      <div class="mc"><div class="n">13</div><div><h4>Lanzamiento: Tu Primer Encargo Pagado con IA</h4></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Incluido: tu propio espacio de IA</h2>
+    <p class="lead">Esto es lo que ningún otro curso de IA te ofrece.</p>
+    <div class="perk"><div class="ico">🤖</div><div><h4>chat.dirk.it — modelos reales, cero configuración</h4><p>Tu espacio de IA privado con una selección de modelos abiertos de frontera y créditos de uso semanales incluidos. Sin claves API, sin sorpresas en la factura. Cuando una lección dice «ahora constrúyelo», cambias de pestaña y lo construyes.</p></div></div>
+    <div class="perk"><div class="ico">⚔️</div><div><h4>El Verificador Cruzado de LLM</h4><p>Una herramienta del curso donde tres modelos responden tu pregunta, se critican entre sí y un juez elige al ganador — aprendes enrutamiento de modelos, debate multiagente y LLM-como-juez usándolos.</p></div></div>
+    <div class="perk"><div class="ico">📱</div><div><h4>La app</h4><p>iOS y Android. Rachas, XP, misiones, repetición espaciada — la mecánica que te lleva a la lección 13 en vez de a la 3.</p></div></div>
+  </section>
+
+  <section class="faq">
+    <h2>Preguntas</h2>
+    <details><summary>¿Necesito conocimientos técnicos?</summary><p>No. El curso empieza desde cero y todas las herramientas que se usan son gratuitas o están incluidas. Si sabes usar un navegador, puedes hacer este curso.</p></details>
+    <details><summary>¿Qué incluye exactamente el precio?</summary><p>$79 hoy cubren tus primeros 3 meses de todo: las 13 masterclasses en la app más el espacio de IA (chat.dirk.it) con créditos de modelos semanales. Después de 3 meses tu membresía continúa a $20/mes — cancela cuando quieras, sin preguntas.</p></details>
+    <details><summary>¿Cómo funciona realmente el aprendizaje?</summary><p>Lecciones diarias cortas, rachas, XP, misiones y repaso espaciado — la mecánica que hace que los hábitos se afiancen. Y cada unidad termina con un resultado real: algo que has creado.</p></details>
+    <details><summary>¿Puedo pagar en reales brasileños?</summary><p>Sí — en hasta 12 cuotas, con Pix o boleto, a través de nuestro checkout brasileño.</p></details>
+  </section>
+
+  <footer>© 2026 Dirk Ahlborn · dirk.it · <a href="/es/founder/">También: Fundador de Startup — De Cero al Lanzamiento</a></footer>
+</div>
+</body>
+</html>
