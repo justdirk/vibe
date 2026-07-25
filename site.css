@@ -34,3 +34,15 @@
     nav.top .links a{font-size:13px}
     nav.top .links a.cta{padding:8px 14px}
   }
+
+  /* CRO:mobile — tap targets, nav density, offer grid */
+  nav.top .links a{display:inline-flex;align-items:center;min-height:44px}
+  .offer3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+  @media(max-width:900px){.offer3{grid-template-columns:1fr !important}}
+  @media(max-width:560px){
+    nav.top .links a.navSecondary{display:none}
+    nav.top .links{gap:6px 14px}
+  }
+  /* CRO:navtight */
+  @media(max-width:900px){nav.top{padding:6px 20px !important}}
+  @media(max-width:560px){nav.top .sig{font-size:24px !important}}
