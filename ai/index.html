@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI in Practice: Create, Work, and Earn — taught by Dirk Ahlborn</title>
-<meta name="description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace.">
+<meta name="description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace. $79 for 3 months, then $20/mo.">
 <style>
   :root{
     --bg:#0b0d12; --panel:#12151d; --panel2:#181c27; --border:#242a38;
@@ -18,37 +18,91 @@
   nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
   .logo{font-weight:800;font-size:20px;color:var(--text)}
   .logo span{color:var(--gold)}
-  nav a.back{color:var(--muted);font-size:14.5px}
-  header{padding:56px 0 30px;text-align:left;max-width:760px}
+  nav a.back{color:var(--muted);font-size:14.5px;display:inline-flex;align-items:center;min-height:44px}
+  header{padding:48px 0 30px;text-align:left;max-width:820px}
   .kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:14px}
-  h1{font-size:clamp(28px,4.6vw,42px);line-height:1.14;margin:0 0 16px;font-weight:800}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 16px;font-weight:800}
   .sub{color:var(--muted);font-size:17.5px;margin:0 0 26px}
-  .btn{display:inline-block;background:var(--accent);color:#0b0d12;font-weight:700;padding:14px 28px;border-radius:999px;font-size:16px;border:0;cursor:pointer}
+  .cred{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 22px;color:var(--muted);font-size:14px}
+  .cred span b{color:var(--text);font-weight:650}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;background:var(--accent);color:#0b0d12;font-weight:700;padding:13px 28px;border-radius:999px;font-size:16px;border:0;cursor:pointer}
   .btn.gold{background:var(--gold)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border)}
   .pricebox{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin:8px 0 10px}
-  .pricebox .p b{font-size:30px} .pricebox .p s{color:var(--muted);margin-left:8px}
-  .pricebox .p div{color:var(--muted);font-size:13.5px}
-  .note{color:var(--muted);font-size:13px;margin-bottom:26px}
-  section{padding:38px 0}
-  h2{font-size:26px;margin:0 0 6px}
-  .lead{color:var(--muted);margin:0 0 24px;max-width:44em}
+  .pricebox .p b{font-size:32px} .pricebox .p s{color:var(--muted);margin-left:8px}
+  .pricebox .p div{color:var(--muted);font-size:13.5px;max-width:46ch}
+  .note{color:var(--muted);font-size:13.5px;margin:0 0 8px}
+  .note a{color:var(--green)}
+  section{padding:40px 0;border-top:1px solid var(--border)}
+  section.plain{border-top:0}
+  h2{font-size:clamp(23px,3.2vw,30px);margin:0 0 8px;line-height:1.2}
+  h3{font-size:19px;margin:0 0 8px}
+  .lead{color:var(--muted);margin:0 0 26px;max-width:46em}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  @media(max-width:700px){.grid{grid-template-columns:1fr}}
-  .mc{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
-  .mc .n{color:var(--accent);font-weight:800;font-size:14px;min-width:26px;padding-top:2px}
-  .mc div h4{margin:0;font-size:15.5px;font-weight:650}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+
+  /* outcome strip */
+  .out{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:760px){.out{grid-template-columns:1fr}}
+  .out div{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px}
+  .out b{display:block;font-size:15.5px;margin-bottom:3px}
+  .out p{margin:0;color:var(--muted);font-size:14px}
+
+  /* for / not for */
+  .fit{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.fit{grid-template-columns:1fr}}
+  .fit > div{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px}
+  .fit h3{font-size:17px}
+  .fit ul{margin:10px 0 0;padding-left:0;list-style:none}
+  .fit li{color:var(--muted);font-size:14.5px;padding:7px 0 7px 26px;position:relative;line-height:1.5}
+  .fit li:before{position:absolute;left:0;top:6px;font-weight:700}
+  .yes li:before{content:"✓";color:var(--green)}
+  .no li:before{content:"—";color:var(--muted)}
+
+  /* curriculum */
+  .mc{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start}
+  .mc .n{color:var(--accent);font-weight:800;font-size:14px;min-width:26px;padding-top:3px}
+  .mc h4{margin:0 0 6px;font-size:16px;font-weight:650;line-height:1.35}
+  .mc p{margin:0;color:var(--muted);font-size:14.5px}
+  .mc .out-of{display:block;margin-top:9px;font-size:13.5px;color:#c3cbdd}
+  .mc .out-of b{color:var(--text);font-weight:650}
   .free{border-color:var(--green)}
   .free .n{color:var(--green)}
-  .freetag{font-size:11px;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:2px}
+  .freetag{font-size:11px;color:var(--green);border:1px solid var(--green);border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:2px;white-space:nowrap}
+
   .perk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:14px}
   .perk .ico{font-size:24px;line-height:1;margin-top:3px}
   .perk h4{margin:0 0 4px;font-size:16px}
   .perk p{margin:0;color:var(--muted);font-size:14.5px}
-  .faq{border-top:1px solid var(--border)}
+
+  /* comparison table */
+  .cmp{width:100%;border-collapse:collapse;font-size:14.5px}
+  .cmp th,.cmp td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--border);vertical-align:top}
+  .cmp th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  .cmp td:first-child{color:var(--text);font-weight:600;width:34%}
+  .cmp td:nth-child(2){color:var(--muted)}
+  .cmp td:last-child{color:#d7deee}
+  @media(max-width:640px){.cmp td:first-child{width:40%}.cmp th,.cmp td{padding:11px 8px;font-size:13.5px}}
+
+  .cta{background:var(--panel2);border:1px solid var(--border);border-radius:var(--radius);padding:28px 26px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0}
+  .cta h3{margin:0 0 4px}
+  .cta p{margin:0;color:var(--muted);font-size:14.5px;max-width:52ch}
+
+  .guar{background:var(--panel);border:1px solid var(--green);border-radius:var(--radius);padding:22px 24px}
+  .guar h3{margin:0 0 6px;color:var(--green);font-size:17px}
+  .guar p{margin:0;color:var(--muted);font-size:14.5px;max-width:62ch}
+
+  .bundle{background:var(--panel);border:1px solid var(--gold);border-radius:var(--radius);padding:24px 26px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .bundle p{margin:6px 0 0;color:var(--muted);font-size:14.5px;max-width:56ch}
+
+  .founding{background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:22px 24px;color:var(--muted);font-size:14.5px;max-width:70ch}
+  .founding b{color:var(--text)}
+
   details{border-bottom:1px solid var(--border);padding:14px 4px}
-  summary{cursor:pointer;font-weight:600;font-size:15.5px}
-  details p{color:var(--muted);font-size:14.5px;margin:10px 0 4px}
-  footer{border-top:1px solid var(--border);padding:30px 0 46px;color:var(--muted);font-size:13.5px;margin-top:30px}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;min-height:32px}
+  details p{color:var(--muted);font-size:14.5px;margin:10px 0 4px;max-width:70ch}
+  footer{border-top:1px solid var(--border);padding:30px 0 46px;color:var(--muted);font-size:13.5px;margin-top:20px;display:flex;gap:6px 26px;flex-wrap:wrap;align-items:center}
+  footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://dirk.it/ai/">
@@ -61,15 +115,15 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dirk Ahlborn">
 <meta property="og:title" content="AI in Practice: Create, Work, and Earn — taught by Dirk Ahlborn">
-<meta property="og:description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace.">
+<meta property="og:description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace. $79 for 3 months, then $20/mo.">
 <meta property="og:url" content="https://dirk.it/ai/">
 <meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI in Practice: Create, Work, and Earn — taught by Dirk Ahlborn">
-<meta name="twitter:description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace.">
+<meta name="twitter:description" content="13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace. $79 for 3 months, then $20/mo.">
 <meta name="twitter:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"AI in Practice: Create, Work, and Earn","description":"13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace.","url":"https://dirk.it/ai/","inLanguage":"en","provider":{"@type":"Person","name":"Dirk Ahlborn","url":"https://dirk.it/"},"offers":{"@type":"Offer","price":"79","priceCurrency":"USD","category":"Paid","url":"https://dirk.it/ai/","availability":"https://schema.org/InStock","description":"$79 covers the first 3 months of full access; membership then continues at $20/month, cancel anytime.","priceSpecification":[{"@type":"UnitPriceSpecification","price":"79","priceCurrency":"USD","name":"Initial 3-month term","referenceQuantity":{"@type":"QuantitativeValue","value":3,"unitCode":"MON"}},{"@type":"UnitPriceSpecification","price":"20","priceCurrency":"USD","name":"Membership renewal","billingDuration":1,"billingIncrement":1,"referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}]},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dirk Ahlborn","item":"https://dirk.it/"},{"@type":"ListItem","position":2,"name":"AI in Practice: Create, Work, and Earn","item":"https://dirk.it/ai/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","name":"AI in Practice: Create, Work, and Earn","description":"13 masterclasses that turn AI into a practical skill — writing, images, video, voice, no-code apps, automation — ending with your first paid AI gig. Includes your own AI workspace. $79 for 3 months, then $20/mo.","url":"https://dirk.it/ai/","inLanguage":"en","provider":{"@type":"Person","name":"Dirk Ahlborn","url":"https://dirk.it/"},"offers":{"@type":"Offer","price":"79","priceCurrency":"USD","category":"Paid","url":"https://dirk.it/ai/","availability":"https://schema.org/InStock","description":"$79 covers the first 3 months of full access; membership then continues at $20/month, cancel anytime.","priceSpecification":[{"@type":"UnitPriceSpecification","price":"79","priceCurrency":"USD","name":"Initial 3-month term","referenceQuantity":{"@type":"QuantitativeValue","value":3,"unitCode":"MON"}},{"@type":"UnitPriceSpecification","price":"20","priceCurrency":"USD","name":"Membership renewal","billingDuration":1,"billingIncrement":1,"referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}]},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"online"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Dirk Ahlborn","item":"https://dirk.it/"},{"@type":"ListItem","position":2,"name":"AI in Practice: Create, Work, and Earn","item":"https://dirk.it/ai/"}]}]}</script>
 <!-- SEO:end -->
 </head>
 <body>
@@ -81,58 +135,254 @@
 <div class="wrap">
   <nav>
     <div class="logo">dirk<span>.it</span></div>
-    <a class="back" href="/">← All courses</a>
+    <a class="back" href="/courses/">← All courses</a>
   </nav>
 
   <header>
-    <div class="kicker">13 masterclasses · App + AI workspace · Taught by Dirk Ahlborn</div>
-    <h1>AI in Practice:<br>Create, Work, and Earn</h1>
-    <p class="sub">Stop watching AI happen to other people. In 13 hands-on masterclasses you'll write, design, build, automate — and finish by landing your first paid AI work. Bite-size lessons, streaks, and a mission at every step.</p>
+    <div class="kicker">13 masterclasses · App + AI workspace included</div>
+    <h1>Stop reading about AI.<br>Start getting paid for it.</h1>
+    <div class="cred">
+      <span>Taught by <b>Dirk Ahlborn</b></span>
+      <span><b>Founder &amp; CEO</b>, Hyperloop TT</span>
+      <span>Keynotes in <b>40+ countries</b></span>
+    </div>
+    <p class="sub">Thirteen hands-on masterclasses that take you from "I've used ChatGPT a few times" to writing, designing, filming, building and automating with AI — and finishing with a portfolio and your first paid piece of AI work. Every lesson ends with something you made, not something you watched.</p>
     <div class="pricebox">
-      <div class="p"><b>$79</b> <span style="font-size:15px;color:var(--muted)">to start</span><div>Founding price · includes 3 months of everything · then $20/mo · cancel anytime</div></div>
-      <!-- CHECKOUT: replace href with Stripe payment link -->
+      <div class="p"><b>$79</b> <span style="font-size:15px;color:var(--muted)">to start</span><div>Founding price · covers your first 3 months of everything · then $20/month · cancel anytime</div></div>
       <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Get the course</a>
     </div>
-    <p class="note">First lessons are free in the app — try before you buy.</p>
+    <p class="note">Masterclasses 1 and 2 are <a href="#free">free in the app</a> — try the teaching before you pay for it. 14-day refund either way.</p>
   </header>
 
+  <section>
+    <h2>What you actually walk away with</h2>
+    <p class="lead">Not a certificate. Not notes. Files, links and skills you can show someone.</p>
+    <div class="out">
+      <div><b>A portfolio</b><p>Writing, image sets, a short video, a song, a narrated audio piece, a deck and a live site — all made by you, all shareable.</p></div>
+      <div><b>A working AI stack</b><p>The tools you'll keep using after the course, set up the way a professional uses them — plus your own workspace to run them in.</p></div>
+      <div><b>A way to charge for it</b><p>The final masterclass is about pricing, pitching and delivering your first paid AI gig — the part most AI courses leave out.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Is this you?</h2>
+    <p class="lead">This course is deliberately for one kind of person. Being honest about that saves you $79 and saves me a refund.</p>
+    <div class="fit">
+      <div class="yes">
+        <h3>Yes — take it if</h3>
+        <ul>
+          <li>You keep hearing AI will change your work and you'd rather be the one doing the changing.</li>
+          <li>You've used ChatGPT casually and got mediocre results, and you suspect the problem is you and not the model.</li>
+          <li>You want to freelance, add a service to what you already sell, or make yourself the person at work who actually knows this.</li>
+          <li>You learn by making things, not by watching a 40-hour video course you'll never finish.</li>
+          <li>You have twenty focused minutes a day.</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>No — skip it if</h3>
+        <ul>
+          <li>You're an ML engineer. This is about using AI to produce work and income, not about training models.</li>
+          <li>You want passive income with no work. Every masterclass ends with a mission you have to actually do.</li>
+          <li>You want one specific tool taught in depth for a specific job. This is a broad, practical map.</li>
+          <li>You want to be told AI will replace your effort. It replaces your bottleneck. That's better, and it's different.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="midcta">
+    <div class="cta">
+      <div>
+        <h3>Still reading? That's a yes.</h3>
+        <p>$79 covers your first three months. Then $20/month, cancel anytime. 14-day refund.</p>
+      </div>
+      <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Get the course</a>
+    </div>
+  </section>
+
   <section id="free">
-    <h2>What's inside</h2>
-    <p class="lead">Every masterclass produces something real — a piece of writing, an image set, a video, a working site. By the finale you have a portfolio and a playbook.</p>
+    <h2>The 13 masterclasses</h2>
+    <p class="lead">Every masterclass produces something real. The first two are free in the app so you can judge the teaching before you buy — no card, no trial countdown.</p>
     <div class="grid">
-      <div class="mc free"><div class="n">1</div><div><h4>Your AI Starter Kit: What AI Can Do for You Today<span class="freetag">FREE</span></h4></div></div>
-      <div class="mc free"><div class="n">2</div><div><h4>Prompting: The One Skill Behind Every Tool<span class="freetag">FREE</span></h4></div></div>
-      <div class="mc"><div class="n">3</div><div><h4>Writing With AI: From Emails to Ebooks</h4></div></div>
-      <div class="mc"><div class="n">4</div><div><h4>Images: Create Visuals People Pay For</h4></div></div>
-      <div class="mc"><div class="n">5</div><div><h4>Video: From Text to Moving Pictures</h4></div></div>
-      <div class="mc"><div class="n">6</div><div><h4>Music: Compose Full Songs Without an Instrument</h4></div></div>
-      <div class="mc"><div class="n">7</div><div><h4>Voice: Narration, Your Clone, and Podcasts</h4></div></div>
-      <div class="mc"><div class="n">8</div><div><h4>Presentations: Decks That Do the Talking</h4></div></div>
-      <div class="mc"><div class="n">9</div><div><h4>Websites and Apps: Build Without Code</h4></div></div>
-      <div class="mc"><div class="n">10</div><div><h4>Automation: Work That Runs While You Sleep</h4></div></div>
-      <div class="mc"><div class="n">11</div><div><h4>Marketing: The AI Content Engine</h4></div></div>
-      <div class="mc"><div class="n">12</div><div><h4>E-Commerce: Sell Products With an AI Stack</h4></div></div>
-      <div class="mc"><div class="n">13</div><div><h4>Launch: Your First Paid AI Gig</h4></div></div>
+
+      <div class="mc free"><div class="n">1</div><div>
+        <h4>Your AI Starter Kit: What AI Can Do for You Today<span class="freetag">FREE</span></h4>
+        <p>An honest map of what today's AI is actually good at, where it still fails, and which tools are worth your attention. You leave with a stack chosen for your work instead of whatever went viral this week.</p>
+        <span class="out-of"><b>You finish with:</b> your own AI toolkit, set up and tested.</span>
+      </div></div>
+
+      <div class="mc free"><div class="n">2</div><div>
+        <h4>Prompting: The One Skill Behind Every Tool<span class="freetag">FREE</span></h4>
+        <p>Why the same model gives one person garbage and another person gold. Context, role, constraints, examples, iteration — and how to tell when the model is bluffing you.</p>
+        <span class="out-of"><b>You finish with:</b> a reusable prompt library for the tasks you repeat every week.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">3</div><div>
+        <h4>Writing With AI: From Emails to Ebooks</h4>
+        <p>Long-form and short-form writing that doesn't read like a robot wrote it. Voice, structure, editing, fact-checking, and where you must keep your hands on the keyboard.</p>
+        <span class="out-of"><b>You finish with:</b> a finished long-form piece written in your own voice.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">4</div><div>
+        <h4>Images: Create Visuals People Pay For</h4>
+        <p>From prompt to usable image: composition, style consistency, character consistency, editing and upscaling — plus what you can and can't do commercially.</p>
+        <span class="out-of"><b>You finish with:</b> a consistent image set for a real brand or project.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">5</div><div>
+        <h4>Video: From Text to Moving Pictures</h4>
+        <p>Generated shots, editing, pacing and sound. How to plan a short video so the AI is a tool in your production, not a slot machine you keep pulling.</p>
+        <span class="out-of"><b>You finish with:</b> a short finished video you'd be happy to post.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">6</div><div>
+        <h4>Music: Compose Full Songs Without an Instrument</h4>
+        <p>Writing to a brief, controlling genre and mood, iterating on structure, and where music fits commercially — soundtracks, jingles, background beds for the video you just made.</p>
+        <span class="out-of"><b>You finish with:</b> a finished track made to a brief.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">7</div><div>
+        <h4>Voice: Narration, Your Clone, and Podcasts</h4>
+        <p>Studio-quality narration without a studio, cloning your own voice responsibly, and turning written material into audio people will actually listen to.</p>
+        <span class="out-of"><b>You finish with:</b> a narrated audio piece in your own voice.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">8</div><div>
+        <h4>Presentations: Decks That Do the Talking</h4>
+        <p>Getting from a messy idea to a clear argument, then to slides that carry it. Structure first, design second — the order most people get backwards.</p>
+        <span class="out-of"><b>You finish with:</b> a complete deck built from a blank page.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">9</div><div>
+        <h4>Websites and Apps: Build Without Code</h4>
+        <p>Describing what you want and getting something that works. Scoping, building, fixing what breaks, and publishing it on the internet with your name on it.</p>
+        <span class="out-of"><b>You finish with:</b> a live site or small app at a real URL.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">10</div><div>
+        <h4>Automation: Work That Runs While You Sleep</h4>
+        <p>Chaining tools together so the repetitive part of your work stops needing you. Triggers, steps, checks — and knowing which tasks are worth automating at all.</p>
+        <span class="out-of"><b>You finish with:</b> one real workflow of yours, automated and running.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">11</div><div>
+        <h4>Marketing: The AI Content Engine</h4>
+        <p>Turning one idea into a week of content across channels without sounding like a bot farm. Positioning, hooks, repurposing, and a schedule you can actually keep.</p>
+        <span class="out-of"><b>You finish with:</b> a month of content planned and the first week produced.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">12</div><div>
+        <h4>E-Commerce: Sell Products With an AI Stack</h4>
+        <p>Product research, listings, photography, descriptions and ads — the whole storefront assembled with the skills from the previous masterclasses.</p>
+        <span class="out-of"><b>You finish with:</b> a product listing complete enough to sell.</span>
+      </div></div>
+
+      <div class="mc"><div class="n">13</div><div>
+        <h4>Launch: Your First Paid AI Gig</h4>
+        <p>Packaging what you can now do into something someone will pay for. Where the demand is, what to charge, how to pitch it, and how to deliver without over-promising.</p>
+        <span class="out-of"><b>You finish with:</b> an offer, a price, and a pitch you've actually sent.</span>
+      </div></div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="cta">
+      <div>
+        <h3>Start with the free masterclasses</h3>
+        <p>Two full masterclasses, free in the app. If the teaching isn't for you, you'll know before you've spent anything.</p>
+      </div>
+      <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Get the course — $79</a>
     </div>
   </section>
 
   <section>
     <h2>Included: your own AI workspace</h2>
-    <p class="lead">This is what no other AI course gives you.</p>
-    <div class="perk"><div class="ico">🤖</div><div><h4>chat.dirk.it — real models, zero setup</h4><p>Your private AI workspace with curated frontier open models and weekly usage credits included. No API keys, no billing surprises. When a lesson says "now build it," you switch tabs and build it.</p></div></div>
-    <div class="perk"><div class="ico">⚔️</div><div><h4>The LLM Cross-Checker</h4><p>A course tool where three models answer your question, critique each other, and a judge picks the winner — you learn model routing, multi-agent debate, and LLM-as-judge by using them.</p></div></div>
-    <div class="perk"><div class="ico">📱</div><div><h4>The app</h4><p>iOS &amp; Android. Streaks, XP, missions, spaced repetition — the mechanics that get you to lesson 13 instead of lesson 3.</p></div></div>
+    <p class="lead">This is the part no other AI course gives you. When a lesson says "now build it," you switch tabs and build it — no API keys, no credit card, no billing surprises.</p>
+    <div class="perk"><div class="ico">🤖</div><div><h4>chat.dirk.it — real models, zero setup</h4><p>Your private AI workspace with curated frontier open models and weekly usage credits included in your membership. Everything the course asks you to make, you can make here.</p></div></div>
+    <div class="perk"><div class="ico">⚔️</div><div><h4>The LLM Cross-Checker</h4><p>A course tool where three models answer your question, critique each other, and a judge picks the winner. You learn model routing, multi-agent debate and LLM-as-judge by using them, not by reading about them.</p></div></div>
+    <div class="perk"><div class="ico">📱</div><div><h4>The app — iOS &amp; Android</h4><p>Bite-size lessons, streaks, XP, missions and spaced repetition: the mechanics that get you to masterclass 13 instead of masterclass 3. Twenty minutes on a phone counts as progress.</p></div></div>
   </section>
 
-  <section class="faq">
+  <section>
+    <h2>"Isn't all of this free on YouTube?"</h2>
+    <p class="lead">Some of it is. Here's the honest comparison, so you can decide rather than be sold.</p>
+    <table class="cmp">
+      <tr><th></th><th>Free tutorials</th><th>This course</th></tr>
+      <tr><td>Coverage</td><td>Whatever the algorithm served you, in whatever order</td><td>Thirteen masterclasses in a deliberate sequence, each building on the last</td></tr>
+      <tr><td>Currency</td><td>Half of it is about a tool version that no longer exists</td><td>Maintained, and your membership keeps you on the current version</td></tr>
+      <tr><td>Tool access</td><td>You pay for each tool separately, or hit the free tier's wall</td><td>An AI workspace with model credits is included in the price</td></tr>
+      <tr><td>Finishing it</td><td>Nothing makes you come back tomorrow</td><td>Streaks, missions and spaced repetition, built to be finished</td></tr>
+      <tr><td>Getting paid</td><td>Almost never covered</td><td>An entire masterclass on pricing, pitching and delivering paid work</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Who's teaching this</h2>
+    <p class="lead">I don't teach what I've read. I teach what I've built.</p>
+    <p style="color:var(--muted);max-width:66ch;margin:0 0 16px">I started in banking in Berlin in 1993 and quit at nineteen. I built companies in alternative energy and interior design in Italy and sold one to a global energy conglomerate in 2006. In California I helped incubate high-tech startups spinning out of NASA Ames research. In 2013 I founded JumpStarter and used its crowd-collaboration model to turn an open whitepaper into Hyperloop Transportation Technologies — 800+ contributors across 40 countries working for equity, with partners including Hitachi Rail, TÜV SÜD and Munich Re. Two Harvard Business School case studies later, I build with AI every day and teach what's actually working.</p>
+    <p style="color:var(--muted);max-width:66ch;margin:0"><a href="/about/">The full record →</a></p>
+  </section>
+
+  <section>
+    <h2>The price, in full</h2>
+    <div class="pricebox">
+      <div class="p"><b>$79</b> <span style="font-size:15px;color:var(--muted)">to start</span><div>$79 covers your first 3 months of everything — all 13 masterclasses in the app plus the AI workspace with weekly model credits. After 3 months, membership continues at $20/month. Cancel anytime, from inside the app.</div></div>
+      <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Get the course</a>
+    </div>
+    <div class="guar" style="margin-top:14px">
+      <h3>14-day refund</h3>
+      <p>Not for you? Email <a href="mailto:mail@dirk.it">mail@dirk.it</a> within 14 days of purchase and you get your money back, to the original payment method. This isn't a launch gimmick — it's already written into the <a href="/terms/">Terms</a>, alongside your statutory rights.</p>
+    </div>
+    <div class="bundle" style="margin-top:14px">
+      <div>
+        <h3 style="margin:0">Taking the founder course too?</h3>
+        <p>Both courses together — <b>AI in Practice</b> and <b>Startup Founder: Zero to Launch</b> — are $179 instead of $208.</p>
+      </div>
+      <a class="btn ghost" href="https://buy.stripe.com/8x2cN515hbyQ3e2eYpfw40a" data-checkout="dirk_bundle">Get both — $179</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Founding cohort</h2>
+    <div class="founding">
+      <p style="margin:0 0 10px">You won't find testimonials on this page, because <b>this course is new and I'm not going to invent them.</b> What I can offer instead is better than a wall of five-star quotes from strangers: two complete masterclasses free in the app, a 14-day refund, and a founding price that's lower than it will be once the reviews exist.</p>
+      <p style="margin:0">Judge the teaching, not the marketing. That's what the free masterclasses are for.</p>
+    </div>
+  </section>
+
+  <section>
     <h2>Questions</h2>
-    <details><summary>Do I need any technical background?</summary><p>No. The course starts from zero and every tool used is either free or included. If you can use a browser, you can do this course.</p></details>
-    <details><summary>What exactly is included in the price?</summary><p>$79 today covers your first 3 months of everything: all 13 masterclasses in the app plus the AI workspace (chat.dirk.it) with weekly model credits. After 3 months your membership continues at $20/month — cancel anytime, no questions.</p></details>
-    <details><summary>How does the learning actually work?</summary><p>Short daily lessons, streaks, XP, missions, and spaced review — the mechanics that make habits stick. And every unit ends with real output: something you made.</p></details>
+    <details><summary>Do I need any technical background?</summary><p>No. The course starts from zero and every tool used is either free or included in your membership. If you can use a browser, you can do this course.</p></details>
+    <details><summary>How much time does it take?</summary><p>The lessons are built for about twenty focused minutes a day, and the app is designed around that: short lessons, streaks and spaced review. Go faster if you want — the whole thing is unlocked from day one, nothing is drip-fed.</p></details>
+    <details><summary>What exactly is included in the price?</summary><p>$79 today covers your first 3 months of everything: all 13 masterclasses in the app plus the AI workspace at chat.dirk.it with weekly model credits. After 3 months your membership continues at $20/month — cancel anytime, no email required.</p></details>
+    <details><summary>Do I have to pay for ChatGPT, Midjourney and the rest on top?</summary><p>No. The included workspace covers what the course asks you to build. If you later want a specific commercial tool for client work, you'll know exactly which one and why — but you can complete the entire course without another subscription.</p></details>
+    <details><summary>What happens after 3 months if I cancel?</summary><p>Your membership ends and access to the app and workspace stops. Everything you made during the course is yours — the files, the site, the portfolio, the prompt library. Those don't live behind my paywall.</p></details>
+    <details><summary>Will this be out of date in six months?</summary><p>Parts of any AI course age fast, which is exactly why this is a membership rather than a one-time download. Lessons get updated as tools change, and the workspace models get updated too. The judgment you learn — how to brief, iterate and check a model — outlives every tool in it.</p></details>
+    <details><summary>Is this really going to get me paid work?</summary><p>Masterclass 13 gives you the offer, the pricing and the pitch, and the earlier masterclasses give you the portfolio to back it up. What it can't do is send the pitch for you or guarantee a buyer. Anyone promising you that number is guessing.</p></details>
+    <details><summary>How does the learning actually work?</summary><p>Short daily lessons, streaks, XP, missions and spaced review — the mechanics that make a habit stick. Every unit ends with real output: something you made, not a quiz you passed.</p></details>
+    <details><summary>Which languages is it in?</summary><p>This page and the course are in English, and the site is also available in German, Spanish, Portuguese and Italian — use the language bar at the top.</p></details>
     <details><summary>Can I pay from Brazil?</summary><p>Yes. Checkout is in US dollars through Stripe and accepts Brazilian credit cards. A local reais checkout with Pix and boleto is not live yet.</p></details>
+    <details><summary>What if I don't like it?</summary><p>Email <a href="mailto:mail@dirk.it">mail@dirk.it</a> within 14 days and you're refunded. No form, no exit interview.</p></details>
   </section>
 
-  <footer>© 2026 Dirk Ahlborn · dirk.it · <a href="/founder/">Also: Startup Founder — Zero to Launch</a></footer>
+  <section>
+    <div class="cta">
+      <div>
+        <h3>Twenty minutes a day, thirteen masterclasses, one portfolio.</h3>
+        <p>$79 covers your first three months. Then $20/month, cancel anytime. 14-day refund.</p>
+      </div>
+      <a class="btn gold" href="https://buy.stripe.com/eVqeVd8xJeL229YcQhfw402" data-checkout="dirk_ai">Get the course</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Dirk Ahlborn · dirk.it</span>
+    <a href="/founder/">Also: Startup Founder — Zero to Launch</a>
+    <a href="/courses/">All courses</a>
+    <a href="/terms/">Terms</a>
+  </footer>
 </div>
+<script defer src="/a.js"></script>
 </body>
 </html>
