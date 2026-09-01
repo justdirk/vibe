@@ -21,53 +21,35 @@ jobs:
       - name: Rewrite the PressDuo and Condivida cards
         id: edit
         run: |
-          python3 - <<'PY'
+          python3 - <<'PYEOF'
           import os, sys
           p = 'index.html'
           s = open(p, encoding='utf-8').read()
-          out = os.environ['GITHUB_OUTPUT']
-
+          out = os.environ.get('GITHUB_OUTPUT', '/dev/null')
           if 'condivida.com' in s and 'pressduo.com' in s:
-              print('already applied')
-              open(out, 'a').write('changed=0\n')
-              sys.exit(0)
-
-          old_pa = '''      <a href="https://outreach.dirk.it" rel="noopener" style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px;color:#F2EFE9">
-        <div style="font-weight:500;font-size:22px">PitchAgent</div>
-        <p style="font-size:15px;line-height:1.55;color:#9B958A;margin:0">Turn real customer interviews into a message that's tested on real prospects — then pitch the press with it. Evidence only, nothing invented.</p>
-        <span style="font-size:14px;font-weight:600;color:#E0B15C;margin-top:auto">outreach.dirk.it →</span>
-      </a>'''
-          new_pa = '''      <a href="https://pressduo.com" rel="noopener" style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px;color:#F2EFE9">
-        <div style="font-weight:500;font-size:22px">PressDuo</div>
-        <p style="font-size:15px;line-height:1.55;color:#9B958A;margin:0">Turn real customer interviews into a message that's tested on real prospects — then pitch the press with it. Evidence only, nothing invented.</p>
-        <span style="font-size:14px;font-weight:600;color:#E0B15C;margin-top:auto">pressduo.com →</span>
-      </a>'''
-          assert s.count(old_pa) == 1, 'PitchAgent card anchor not found exactly once'
-          s = s.replace(old_pa, new_pa)
-
-          old_v = '''      <div style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-weight:500;font-size:22px;display:flex;align-items:center;gap:10px">VaultPro <span style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#E0B15C;border:1px solid rgba(224,177,92,.4);padding:3px 8px">Coming soon</span></div>
-        <p style="font-size:15px;line-height:1.55;color:#9B958A;margin:0">Your investor data room: pitch deck, financials and legal docs behind secure invites — with page-by-page analytics on what investors actually read.</p>
-        <span style="font-size:14px;font-weight:600;color:#8A8478;margin-top:auto">vault.dirk.it</span>
-      </div>'''
-          new_v = '''      <a href="https://condivida.com" rel="noopener" style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px;color:#F2EFE9">
-        <div style="font-weight:500;font-size:22px">Condivida</div>
-        <p style="font-size:15px;line-height:1.55;color:#9B958A;margin:0">Your investor data room: pitch deck, financials and legal docs behind secure invites — with page-by-page analytics on what investors actually read.</p>
-        <span style="font-size:14px;font-weight:600;color:#E0B15C;margin-top:auto">condivida.com →</span>
-      </a>'''
-          assert s.count(old_v) == 1, 'VaultPro card anchor not found exactly once'
-          s = s.replace(old_v, new_v)
-
-          old_f = '<a href="https://outreach.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">PitchAgent</a>'
-          new_f = ('<a href="https://pressduo.com" style="font-size:14px;color:#9B958A" rel="noopener">PressDuo</a>'
-                   '<a href="https://condivida.com" style="font-size:14px;color:#9B958A" rel="noopener">Condivida</a>')
-          assert s.count(old_f) == 1, 'footer link anchor not found exactly once'
-          s = s.replace(old_f, new_f)
-
+              print('already applied'); open(out, 'a').write('changed=0\n'); sys.exit(0)
+          NL = chr(10)
+          reps = []
+          reps.append(('>PitchAgent</div>', '>PressDuo</div>'))
+          reps.append(('"https://outreach.dirk.it" rel="noopener"', '"https://pressduo.com" rel="noopener"'))
+          reps.append(('>outreach.dirk.it →</span>', '>pressduo.com →</span>'))
+          reps.append(('href="https://outreach.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">PitchAgent</a>', 'href="https://pressduo.com" style="font-size:14px;color:#9B958A" rel="noopener">PressDuo</a><a href="https://condivida.com" style="font-size:14px;color:#9B958A" rel="noopener">Condivida</a>'))
+          reps.append(('<div style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px">', '<a href="https://condivida.com" rel="noopener" style="background:#0A0A09;padding:36px;display:flex;flex-direction:column;gap:12px;color:#F2EFE9">'))
+          reps.append(('VaultPro <span style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#E0B15C;border:1px solid rgba(224,177,92,.4);padding:3px 8px">Coming soon</span>', 'Condivida'))
+          reps.append(('<span style="font-size:14px;font-weight:600;color:#8A8478;margin-top:auto">vault.dirk.it</span>' + NL + '      </div>', '<span style="font-size:14px;font-weight:600;color:#E0B15C;margin-top:auto">condivida.com →</span>' + NL + '      </a>'))
+          for old, new in reps:
+              n = s.count(old)
+              print('count', n, '::', old[:60])
+              assert n == 1, 'anchor not found exactly once: ' + old[:80]
+              s = s.replace(old, new)
           open(p, 'w', encoding='utf-8').write(s)
           open(out, 'a').write('changed=1\n')
           print('rewritten')
-          PY
+          PYEOF
+
+      - name: Show the diff
+        if: steps.edit.outputs.changed == '1'
+        run: git --no-pager diff --stat
 
       - name: Commit and remove this workflow
         if: steps.edit.outputs.changed == '1'
