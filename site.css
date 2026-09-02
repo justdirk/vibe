@@ -51,9 +51,9 @@
   .hero h1{overflow-wrap:anywhere}
   @media(max-width:700px){
     .hero{min-height:0 !important}
-    .heroImg{background-position:center 12% !important}
+    .heroImg{background-position:20% 8% !important}
     .heroShade{background:linear-gradient(to top, rgba(10,10,9,.97) 0%, rgba(10,10,9,.92) 42%, rgba(10,10,9,.25) 70%, transparent) !important}
-    .heroCopy{min-height:0 !important;padding:320px 20px 48px !important;justify-content:flex-end !important}
+    .heroCopy{min-height:0 !important;padding:340px 20px 48px !important;justify-content:flex-end !important}
     .heroCol{max-width:100% !important;gap:18px !important}
     .hero h1{overflow-wrap:normal}
   }
