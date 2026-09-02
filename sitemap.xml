@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dirk.it/</loc>
+    <loc>https://dirk.it/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/"/>
@@ -12,7 +12,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/</loc>
+    <loc>https://dirk.it/de/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/"/>
@@ -23,7 +23,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/</loc>
+    <loc>https://dirk.it/es/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/"/>
@@ -34,7 +34,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/</loc>
+    <loc>https://dirk.it/pt/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/"/>
@@ -45,7 +45,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/</loc>
+    <loc>https://dirk.it/it/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/"/>
@@ -56,7 +56,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dirk.it/courses/</loc>
+    <loc>https://dirk.it/courses/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/courses/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/courses/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/courses/"/>
@@ -67,7 +67,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/courses/</loc>
+    <loc>https://dirk.it/de/courses/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/courses/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/courses/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/courses/"/>
@@ -78,7 +78,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/courses/</loc>
+    <loc>https://dirk.it/es/courses/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/courses/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/courses/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/courses/"/>
@@ -89,7 +89,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/courses/</loc>
+    <loc>https://dirk.it/pt/courses/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/courses/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/courses/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/courses/"/>
@@ -100,7 +100,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/courses/</loc>
+    <loc>https://dirk.it/it/courses/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/courses/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/courses/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/courses/"/>
@@ -111,7 +111,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/culinaris/</loc>
+    <loc>https://dirk.it/culinaris/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/culinaris/"/>
@@ -122,7 +122,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/culinaris/</loc>
+    <loc>https://dirk.it/de/culinaris/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/culinaris/"/>
@@ -133,7 +133,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/culinaris/</loc>
+    <loc>https://dirk.it/es/culinaris/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/culinaris/"/>
@@ -144,7 +144,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/culinaris/</loc>
+    <loc>https://dirk.it/pt/culinaris/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/culinaris/"/>
@@ -155,7 +155,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/culinaris/</loc>
+    <loc>https://dirk.it/it/culinaris/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/culinaris/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/culinaris/"/>
@@ -166,7 +166,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/about/</loc>
+    <loc>https://dirk.it/about/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/about/"/>
@@ -177,7 +177,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/about/</loc>
+    <loc>https://dirk.it/de/about/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/about/"/>
@@ -188,7 +188,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/about/</loc>
+    <loc>https://dirk.it/es/about/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/about/"/>
@@ -199,7 +199,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/about/</loc>
+    <loc>https://dirk.it/pt/about/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/about/"/>
@@ -210,7 +210,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/about/</loc>
+    <loc>https://dirk.it/it/about/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/about/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/about/"/>
@@ -221,7 +221,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/ai/</loc>
+    <loc>https://dirk.it/ai/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/ai/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/"/>
@@ -232,7 +232,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/ai/</loc>
+    <loc>https://dirk.it/de/ai/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/ai/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/"/>
@@ -243,7 +243,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/ai/</loc>
+    <loc>https://dirk.it/es/ai/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/ai/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/"/>
@@ -254,7 +254,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/ai/</loc>
+    <loc>https://dirk.it/pt/ai/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/ai/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/"/>
@@ -265,7 +265,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/ai/</loc>
+    <loc>https://dirk.it/it/ai/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/ai/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/ai/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/ai/"/>
@@ -276,7 +276,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/founder/</loc>
+    <loc>https://dirk.it/founder/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/founder/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/founder/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/founder/"/>
@@ -287,7 +287,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/founder/</loc>
+    <loc>https://dirk.it/de/founder/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/founder/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/founder/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/founder/"/>
@@ -298,7 +298,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/founder/</loc>
+    <loc>https://dirk.it/es/founder/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/founder/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/founder/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/founder/"/>
@@ -309,7 +309,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/founder/</loc>
+    <loc>https://dirk.it/pt/founder/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/founder/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/founder/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/founder/"/>
@@ -320,7 +320,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/founder/</loc>
+    <loc>https://dirk.it/it/founder/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/founder/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/founder/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/founder/"/>
@@ -331,7 +331,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dirk.it/speaking/</loc>
+    <loc>https://dirk.it/speaking/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/speaking/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/speaking/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/speaking/"/>
@@ -342,7 +342,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/de/speaking/</loc>
+    <loc>https://dirk.it/de/speaking/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/speaking/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/speaking/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/speaking/"/>
@@ -353,7 +353,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/es/speaking/</loc>
+    <loc>https://dirk.it/es/speaking/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/speaking/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/speaking/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/speaking/"/>
@@ -364,7 +364,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/pt/speaking/</loc>
+    <loc>https://dirk.it/pt/speaking/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/speaking/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/speaking/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/speaking/"/>
@@ -375,7 +375,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/it/speaking/</loc>
+    <loc>https://dirk.it/it/speaking/</loc><lastmod>2026-09-02</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://dirk.it/speaking/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://dirk.it/de/speaking/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://dirk.it/es/speaking/"/>
@@ -386,17 +386,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/chat/</loc>
+    <loc>https://dirk.it/chat/</loc><lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/privacy/</loc>
+    <loc>https://dirk.it/privacy/</loc><lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dirk.it/terms/</loc>
+    <loc>https://dirk.it/terms/</loc><lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

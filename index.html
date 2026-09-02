@@ -7,6 +7,7 @@
 <meta name="description" content="Thirty years of building companies — from Berlin banking to Hyperloop. Courses, keynotes, and the exact playbook: how to start, build, and earn in the age of AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css">
 
 <!-- SEO:start -->
@@ -50,14 +51,14 @@
     </div>
   </nav>
 
-  <section style="position:relative;min-height:640px">
-    <div style="position:absolute;inset:0;background-image:url('https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg');background-size:cover;background-position:center 20%"></div>
+  <section class="hero" style="position:relative;min-height:640px;overflow:hidden">
+    <div class="heroImg" style="position:absolute;inset:0;background-image:url('https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg');background-size:cover;background-position:center 20%"></div>
     <div style="position:absolute;inset:0;background:linear-gradient(to left, rgba(10,10,9,0.92) 0%, rgba(10,10,9,0.65) 40%, rgba(10,10,9,0.1) 72%, transparent);pointer-events:none"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,9,0.85), transparent 40%);pointer-events:none"></div>
-    <div class="padx" style="position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:28px;min-height:640px;padding:96px 56px 72px;max-width:1440px;margin:0 auto;box-sizing:border-box;pointer-events:none">
-      <div style="margin-left:auto;max-width:620px;display:flex;flex-direction:column;gap:28px;min-width:0">
+    <div class="heroShade" style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,9,0.85), transparent 40%);pointer-events:none"></div>
+    <div class="padx heroCopy" style="position:relative;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:28px;min-height:640px;padding:96px 56px 72px;max-width:1440px;margin:0 auto;box-sizing:border-box;pointer-events:none">
+      <div class="heroCol" style="margin-left:auto;max-width:700px;display:flex;flex-direction:column;gap:28px;min-width:0">
         <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">Founder · HyperloopTT &amp; JumpStarter</div>
-        <h1 style="font-weight:500;font-size:clamp(48px,6vw,88px);line-height:1.0;margin:0;letter-spacing:-0.01em;text-wrap:balance;max-width:14ch;text-shadow:0 2px 32px rgba(10,10,9,0.6)">Entrepreneurship <em style="color:#E0B15C;font-style:normal">can be learned.</em></h1>
+        <h1 style="font-weight:500;font-size:clamp(34px,9vw,76px);line-height:1.0;margin:0;letter-spacing:-0.01em;text-wrap:balance;max-width:16ch;text-shadow:0 2px 32px rgba(10,10,9,0.6)">Entrepreneurship <em style="color:#E0B15C;font-style:normal">can be learned.</em></h1>
         <p style="font-size:20px;line-height:1.55;color:#C9C4B9;margin:0;max-width:46ch;text-wrap:pretty;text-shadow:0 1px 16px rgba(10,10,9,0.7)">Thirty years of building companies — from Berlin banking to Hyperloop. Now I teach the exact playbook: how to start, build, and earn in the age of AI.</p>
         <div style="display:flex;gap:16px;margin-top:8px;pointer-events:auto;flex-wrap:wrap">
           <a href="/courses/" class="btnGold">View the courses</a>
@@ -209,15 +210,20 @@
 
   <footer class="site">
     <div class="sig" style="font-size:30px">Dirk Ahlborn</div>
-    <div style="display:flex;gap:28px;flex-wrap:wrap">
-      <a href="/courses/" style="font-size:14px;color:#9B958A">Courses</a>
+    <div class="footlinks">
+      <div class="footrow"><a href="/courses/" style="font-size:14px;color:#9B958A">Courses</a>
       <a href="/speaking/" style="font-size:14px;color:#9B958A">Speaking</a>
       <a href="/about/" style="font-size:14px;color:#9B958A">About</a>
       <a href="/culinaris/" style="font-size:14px;color:#9B958A">Culinaris</a>
       <a href="/privacy/" style="font-size:14px;color:#9B958A">Privacy</a>
-      <a href="/terms/" style="font-size:14px;color:#9B958A">Terms</a>
-    
-      <a href="https://starterfuel.com" class="footer-sf" style="font-size:14px;color:#9B958A" rel="noopener">StarterFuel</a><a href="https://dna.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Venture DNA</a><a href="https://remixer.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Remixer</a><a href="https://pressduo.com" style="font-size:14px;color:#9B958A" rel="noopener">PressDuo</a><a href="https://condivida.com" style="font-size:14px;color:#9B958A" rel="noopener">Condivida</a></div>
+      <a href="/terms/" style="font-size:14px;color:#9B958A">Terms</a></div>
+      <div class="footrow"><span class="footlbl">Tools</span><a href="/chat/" style="font-size:14px;color:#9B958A">dirk.it AI</a>
+      <a href="https://starterfuel.com" style="font-size:14px;color:#9B958A" rel="noopener">StarterFuel</a>
+      <a href="https://dna.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Venture DNA</a>
+      <a href="https://remixer.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Remixer</a>
+      <a href="https://pressduo.com" style="font-size:14px;color:#9B958A" rel="noopener">PressDuo</a>
+      <a href="https://condivida.com" style="font-size:14px;color:#9B958A" rel="noopener">Condivida</a></div>
+    </div>
     <div style="font-size:13px;color:#8A8478">© 2026 Dirk Ahlborn · <a href="/" style="color:#E0B15C">dirk.it</a></div>
   </footer>
 </div>
