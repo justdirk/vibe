@@ -3,29 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>dirk.it AI — LLM &amp; app builder</title>
-<meta name="description" content="dirk.it AI — an LLM assistant and app builder by Dirk Ahlborn. Included with the AI in Practice course.">
+<title>dirk.it AI — your private AI workspace</title>
+<meta name="description" content="Chat with curated frontier models, build apps in plain language, weekly credits included. Free for course students; $20/€20 a month for everyone else.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css">
 <style>
-  .chatwrap{flex:1;min-height:0;display:flex;flex-direction:column;max-width:860px;width:100%;margin:0 auto;padding:0 32px;box-sizing:border-box}
-  @media(max-width:900px){.chatwrap{padding:0 16px}}
+  .gate{max-width:1100px;margin:0 auto;padding:88px 56px 64px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start}
+  .gate h1{font-weight:500;font-size:clamp(40px,5vw,68px);line-height:1.02;margin:0;letter-spacing:-0.01em;text-wrap:balance}
+  .gate .lead{font-size:19px;line-height:1.6;color:#9B958A;margin:0;max-width:52ch;text-wrap:pretty}
+  .incl{display:flex;flex-direction:column;border-top:1px solid rgba(242,239,233,.12);margin-top:8px}
+  .incl div{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid rgba(242,239,233,.12);font-size:15px;line-height:1.5;color:#C9C4B9}
+  .incl b{color:#F2EFE9;font-weight:600;display:block}
+  .incl .soon{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E0B15C;margin-left:8px;vertical-align:middle}
+  .card{border:1px solid rgba(242,239,233,.14);background:#121110;padding:36px;display:flex;flex-direction:column;gap:16px;position:sticky;top:96px}
+  .card h2{font-weight:500;font-size:24px;margin:0;line-height:1.15}
+  .card p{margin:0;font-size:15px;line-height:1.55;color:#9B958A}
+  .card label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8A8478}
+  .card input{width:100%;box-sizing:border-box;background:#0A0A09;border:1px solid rgba(242,239,233,.18);border-radius:3px;color:#F2EFE9;font-size:16px;padding:14px 16px;outline:none;font-family:inherit}
+  .card input:focus{border-color:#E0B15C}
+  .card button{background:#E0B15C;color:#0A0A09;border:0;border-radius:2px;font-size:15px;font-weight:600;padding:15px 24px;cursor:pointer;font-family:inherit;min-height:48px}
+  .card button:disabled{opacity:.6;cursor:wait}
+  .card .small{font-size:13px;color:#8A8478;line-height:1.5}
+  .price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .price b{font-size:34px;font-weight:500;color:#F2EFE9}
+  .price span{font-size:14px;color:#9B958A}
+  .msg{border-left:3px solid #E0B15C;background:rgba(224,177,92,.08);padding:14px 16px;font-size:15px;line-height:1.55;color:#F2EFE9}
+  .msg.err{border-color:#E06B5C;background:rgba(224,107,92,.08)}
+  .faq{max-width:1100px;margin:0 auto;padding:0 56px 96px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px}
+  .faq h3{font-weight:600;font-size:16px;margin:0 0 8px}
+  .faq p{margin:0;font-size:15px;line-height:1.55;color:#9B958A}
+  @media(max-width:900px){.gate{grid-template-columns:1fr;padding:56px 20px 40px;gap:40px}.card{position:static}.faq{padding:0 20px 72px}}
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://dirk.it/chat/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Dirk Ahlborn">
-<meta property="og:title" content="dirk.it AI — LLM &amp; app builder">
-<meta property="og:description" content="dirk.it AI — an LLM assistant and app builder by Dirk Ahlborn. Included with the AI in Practice course.">
+<meta property="og:title" content="dirk.it AI — your private AI workspace">
+<meta property="og:description" content="Chat with curated frontier models, build apps in plain language, weekly credits included. Free for course students; $20/€20 a month for everyone else.">
 <meta property="og:url" content="https://dirk.it/chat/">
 <meta property="og:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="dirk.it AI — LLM &amp; app builder">
-<meta name="twitter:description" content="dirk.it AI — an LLM assistant and app builder by Dirk Ahlborn. Included with the AI in Practice course.">
+<meta name="twitter:title" content="dirk.it AI — your private AI workspace">
+<meta name="twitter:description" content="Chat with curated frontier models, build apps in plain language, weekly credits included. Free for course students; $20/€20 a month for everyone else.">
 <meta name="twitter:image" content="https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"dirk.it AI","description":"Private AI workspace: chat with curated frontier models, build apps in plain language, weekly credits included.","brand":{"@type":"Person","name":"Dirk Ahlborn"},"offers":{"@type":"Offer","price":"20","priceCurrency":"USD","url":"https://dirk.it/chat/","availability":"https://schema.org/InStock"}}</script>
 <!-- SEO:end -->
 </head>
 <body>
@@ -33,50 +57,93 @@
 <style>.lb-ab{display:none}.lb-row a{display:inline-flex;align-items:center;min-height:34px}@media(max-width:560px){.lb-full{display:none}.lb-ab{display:inline}.lb-word{display:none}.lb-row{gap:14px !important;padding:5px 16px !important;justify-content:center !important}}</style><div style="background:#0A0A09;border-bottom:1px solid rgba(255,255,255,.09);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif"><div class="lb-row" style="max-width:1100px;margin:0 auto;padding:9px 22px;display:flex;justify-content:flex-end;align-items:center;gap:15px;flex-wrap:wrap"><span class="lb-word" style="font-size:11px;color:#8A8478;letter-spacing:.09em;text-transform:uppercase">Language</span><a href="/" hreflang="en" lang="en" style="font-size:13px;color:#E0B15C;font-weight:700;text-decoration:none"><span class="lb-full">English</span><span class="lb-ab">EN</span></a><a href="/de/" hreflang="de" lang="de" style="font-size:13px;color:#9B958A;text-decoration:none"><span class="lb-full">Deutsch</span><span class="lb-ab">DE</span></a><a href="/es/" hreflang="es" lang="es" style="font-size:13px;color:#9B958A;text-decoration:none"><span class="lb-full">Español</span><span class="lb-ab">ES</span></a><a href="/pt/" hreflang="pt-BR" lang="pt-BR" style="font-size:13px;color:#9B958A;text-decoration:none"><span class="lb-full">Português</span><span class="lb-ab">PT</span></a><a href="/it/" hreflang="it" lang="it" style="font-size:13px;color:#9B958A;text-decoration:none"><span class="lb-full">Italiano</span><span class="lb-ab">IT</span></a></div></div>
 <!-- LANGBAR:end -->
 
-
-<div style="height:100vh;display:flex;flex-direction:column;background:#0A0A09;color:#F2EFE9;box-sizing:border-box">
-  <nav class="top" style="flex:none;position:static">
+<div style="min-height:100vh;background:#0A0A09;color:#F2EFE9">
+  <nav class="top">
     <a href="/" class="sig" style="font-size:34px">Dirk Ahlborn</a>
     <div class="links">
       <a href="/courses/">Courses</a>
       <a href="/speaking/">Speaking</a>
       <a href="/about/">About</a>
       <a href="/chat/" class="ai on" style="color:#F2EFE9">dirk.it AI</a>
-      <a href="/courses/" class="cta">Enroll</a>
+      <a href="https://starterfuel.com" class="sf navSecondary" rel="noopener">StarterFuel</a>
+      <a href="#access" class="cta">Get access</a>
     </div>
   </nav>
-  <div class="chatwrap">
-    <div style="display:flex;align-items:baseline;gap:14px;padding:36px 4px 20px;flex:none">
-      <h1 style="font-size:28px;font-weight:600;margin:0">dirk.it <span style="color:#E0B15C">AI</span></h1>
-      <span style="font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#9B958A">LLM &amp; app builder</span>
+
+  <section class="gate">
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#E0B15C">dirk.it AI</div>
+      <h1>Your private AI workspace. Frontier models, no setup.</h1>
+      <p class="lead">One login, three tools, weekly credits already loaded. Built on open models you're not locked into — the same stack the AI in Practice course teaches on.</p>
+      <div class="incl">
+        <div><span style="color:#E0B15C;font-weight:500;min-width:28px">01</span><div><b>Chat, with a coach built in</b>Your message is rewritten into a proper prompt, shown to you, then answered by a frontier model. You learn prompting by watching it happen. Long-term memory remembers your projects.</div></div>
+        <div><span style="color:#E0B15C;font-weight:500;min-width:28px">02</span><div><b>App builder</b>Describe an app in plain language, watch it get written and run live in the browser, deploy it to a link. No code, no keys to paste.</div></div>
+        <div><span style="color:#E0B15C;font-weight:500;min-width:28px">03</span><div><b>Music <span class="soon">Coming next</span></b>Lyrics and a style in, a finished song out — on an open-source model, in 19 languages.</div></div>
+      </div>
+      <p class="lead" style="font-size:15px">Credits refill every week. Nothing you type is used to train anyone's model. Cancel anytime.</p>
     </div>
-    <div id="scroll" style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:14px;padding:8px 4px">
-      <div style="align-self:flex-start;background:rgba(242,239,233,.08);color:#F2EFE9;padding:12px 16px;border-radius:8px;max-width:75%;font-size:15px;line-height:1.55;white-space:pre-wrap">This is dirk.it AI — ask me anything, or try me as your app-building copilot.</div>
+
+    <div class="card" id="access">
+      <div class="price"><b>$20</b><span>or €20 · per month</span></div>
+      <p><strong style="color:#F2EFE9">Taking a course? It's included.</strong> Enter the email you enrolled with and we'll send your sign-in link — no card needed.</p>
+      <div id="notice" hidden></div>
+      <form id="f" style="display:flex;flex-direction:column;gap:12px">
+        <label for="email">Your email</label>
+        <input id="email" type="email" name="email" autocomplete="email" required placeholder="you@company.com">
+        <button id="go" type="submit">Continue →</button>
+        <div class="small">Students get a one-time sign-in link by email. Everyone else goes to a secure Stripe checkout, then gets the same link. Already set a password? <a href="https://chat.dirk.it/login">Sign in at chat.dirk.it</a>.</div>
+      </form>
     </div>
-    <div style="display:flex;gap:12px;padding:18px 4px 32px;flex:none">
-      <input id="inp" placeholder="Ask anything — or describe the app you want to build…" style="flex:1;background:#141311;border:1px solid rgba(242,239,233,.15);border-radius:6px;color:#F2EFE9;font-size:15px;padding:14px 16px;outline:none;font-family:inherit">
-      <button id="send" style="background:#E0B15C;color:#0A0A09;border:0;border-radius:6px;font-size:15px;font-weight:600;padding:0 26px;cursor:pointer;font-family:inherit">Send</button>
+  </section>
+
+  <section class="faq">
+    <div><h3>What models are behind it?</h3><p>A curated set of open frontier models — Kimi K2, DeepSeek, Qwen and others — routed through our own gateway. "Auto" picks the best one for your prompt.</p></div>
+    <div><h3>How much can I use?</h3><p>Roughly $2 of model spend a week, refilled automatically. That's hundreds of long conversations; if you hit the ceiling before the refill, the workspace tells you.</p></div>
+    <div><h3>Is my data private?</h3><p>Conversations live in our own database, not a vendor's. Model providers see requests but no account. You can turn memory off per account.</p></div>
+    <div><h3>I paid for a course — why a separate sign-in?</h3><p>The course app and the AI workspace are different systems. Same email, two logins. Your membership unlocks both; cancelling the course ends both.</p></div>
+  </section>
+
+  <footer class="site">
+    <div class="sig" style="font-size:30px">Dirk Ahlborn</div>
+    <div class="footlinks">
+      <div class="footrow"><a href="/courses/" style="font-size:14px;color:#9B958A">Courses</a>
+      <a href="/speaking/" style="font-size:14px;color:#9B958A">Speaking</a>
+      <a href="/about/" style="font-size:14px;color:#9B958A">About</a>
+      <a href="/culinaris/" style="font-size:14px;color:#9B958A">Culinaris</a>
+      <a href="/contact/" style="font-size:14px;color:#9B958A">Contact</a>
+      <a href="/privacy/" style="font-size:14px;color:#9B958A">Privacy</a>
+      <a href="/terms/" style="font-size:14px;color:#9B958A">Terms</a></div>
+      <div class="footrow"><span class="footlbl">Tools</span><a href="/chat/" style="font-size:14px;color:#9B958A">dirk.it AI</a>
+      <a href="https://starterfuel.com" style="font-size:14px;color:#9B958A" rel="noopener">StarterFuel</a>
+      <a href="https://dna.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Venture DNA</a>
+      <a href="https://remixer.dirk.it" style="font-size:14px;color:#9B958A" rel="noopener">Remixer</a>
+      <a href="https://pressduo.com" style="font-size:14px;color:#9B958A" rel="noopener">PressDuo</a>
+      <a href="https://condivida.com" style="font-size:14px;color:#9B958A" rel="noopener">Condivida</a></div>
     </div>
-  </div>
+    <div style="font-size:13px;color:#8A8478">© 2026 Dirk Ahlborn · <a href="/" style="color:#E0B15C">dirk.it</a></div>
+  </footer>
 </div>
 <script>
 (function(){
-  var scroll=document.getElementById('scroll'),inp=document.getElementById('inp'),btn=document.getElementById('send');
-  function add(text,me){
-    var d=document.createElement('div');
-    d.style.cssText='padding:12px 16px;border-radius:8px;max-width:75%;font-size:15px;line-height:1.55;white-space:pre-wrap;'+(me?'align-self:flex-end;background:#E0B15C;color:#0A0A09':'align-self:flex-start;background:rgba(242,239,233,.08);color:#F2EFE9');
-    d.textContent=text;scroll.appendChild(d);scroll.scrollTop=scroll.scrollHeight;return d;
-  }
-  function send(){
-    var t=inp.value.trim();if(!t)return;
-    add(t,true);inp.value='';
-    setTimeout(function(){
-      var m=add("The full dirk.it AI workspace goes live with the AI in Practice course — every student gets access included, with real frontier models and weekly credits at chat.dirk.it.\n\nUntil then: the first two masterclasses of both courses are free in the app — or enroll now at dirk.it/courses/.",false);
-      var a=document.createElement('a');a.href='/courses/';a.textContent='View the courses →';a.style.cssText='align-self:flex-start;color:#E0B15C;font-weight:600;font-size:15px;padding:2px 4px';scroll.appendChild(a);scroll.scrollTop=scroll.scrollHeight;
-    },500);
-  }
-  btn.addEventListener('click',send);
-  inp.addEventListener('keydown',function(e){if(e.key==='Enter')send();});
+  var GATES=['https://gate.dirk.it','https://gate-production.up.railway.app'];
+  var q=new URLSearchParams(location.search), n=document.getElementById('notice'), f=document.getElementById('f'), b=document.getElementById('go'), e=document.getElementById('email');
+  var next=q.get('next')==='build'?'build':'chat';
+  function say(t,err){n.hidden=false;n.className='msg'+(err?' err':'');n.textContent=t;}
+  if(q.get('paid'))say('Payment received. Your sign-in link is on its way — check your inbox (and spam) for "Your dirk.it AI workspace is ready".');
+  if(q.get('expired'))say('That link has expired or was already used. Enter your email and we\'ll send a fresh one.',true);
+  if(q.get('inactive'))say('There\'s no active membership for that email. If you just cancelled, that\'s why — re-subscribe below to come back.',true);
+  if(next==='build')say('The app builder is for members. Enter your email to get a sign-in link that opens it.');
+  function post(i,body){return fetch(GATES[i]+'/api/access',{method:'POST',headers:{'content-type':'application/json'},body:body}).catch(function(err){if(i+1<GATES.length)return post(i+1,body);throw err;});}
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault(); b.disabled=true; b.textContent='One moment…';
+    post(0,JSON.stringify({email:e.value,next:next,lang:(document.documentElement.lang||'en')}))
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){
+        if(x.ok&&x.j.status==='sent'){say('Check your inbox — we sent a one-time sign-in link to '+e.value+'. It works for 30 minutes.');f.hidden=true;}
+        else if(x.ok&&x.j.status==='checkout'&&x.j.url){say('Taking you to a secure checkout…');location.href=x.j.url;}
+        else{say(x.j.error||'Something went wrong. Write to mail@dirk.it and we\'ll sort it out.',true);b.disabled=false;b.textContent='Continue →';}
+      }).catch(function(){say('The sign-in service isn\'t live yet — write to mail@dirk.it and we\'ll set you up by hand.',true);b.disabled=false;b.textContent='Continue →';});
+  });
 })();
 </script>
 <script defer src="/a.js"></script>
