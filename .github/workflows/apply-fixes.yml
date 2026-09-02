@@ -12,8 +12,10 @@ permissions:
   contents: write
   pages: write
   id-token: write
+# Own group: pages.yml uses group "pages" with cancel-in-progress, and a push that
+# triggers both would otherwise cancel this run mid-way (happened on run #4).
 concurrency:
-  group: pages
+  group: apply-fixes
   cancel-in-progress: false
 jobs:
   apply:
