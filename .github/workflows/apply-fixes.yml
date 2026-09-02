@@ -1,0 +1,57 @@
+# Applies the idempotent fix scripts under tools/fixes/, commits the result, and
+# deploys Pages in the same run. Needed because commits made with GITHUB_TOKEN do
+# not trigger other workflows (that is why the 1 Sep toolkit-domains commit never
+# went live). Trigger: push a script into tools/fixes/, or run it manually.
+name: Apply fixes and deploy
+on:
+  push:
+    branches: [main]
+    paths: ["tools/fixes/*.py", ".github/workflows/apply-fixes.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run fix scripts (idempotent, in name order)
+        run: |
+          set -e
+          for f in $(ls tools/fixes/*.py 2>/dev/null | sort); do
+            echo "== $f"; python3 "$f"
+          done
+      - name: Commit changes
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; echo "nothing to commit"
+          else
+            git commit -m "site: apply tools/fixes (automated)" -m "Applied by apply-fixes.yml from $GITHUB_SHA"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
