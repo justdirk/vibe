@@ -5,18 +5,18 @@ import os
 assert open("CNAME").read().strip() == "dirk.it"
 
 NAV = {  # locale → nav labels + paths (mirrors the site nav)
- "en": dict(lang="en", pre="", courses="Courses", speaking="Speaking", about="About", cta="Book Dirk", enroll="Enroll", contact="Contact", privacy="Privacy", terms="Terms", tools="Tools", og="en_US"),
- "de": dict(lang="de", pre="/de", courses="Kurse", speaking="Keynotes", about="Über mich", cta="Dirk buchen", enroll="Jetzt starten", contact="Kontakt", privacy="Datenschutz", terms="AGB", tools="Tools", og="de_DE"),
- "es": dict(lang="es", pre="/es", courses="Cursos", speaking="Conferencias", about="Sobre mí", cta="Contratar a Dirk", enroll="Inscríbete", contact="Contacto", privacy="Privacidad", terms="Términos", tools="Herramientas", og="es_ES"),
- "pt": dict(lang="pt-BR", pre="/pt", courses="Cursos", speaking="Palestras", about="Sobre", cta="Contratar Dirk", enroll="Inscreva-se", contact="Contato", privacy="Privacidade", terms="Termos", tools="Ferramentas", og="pt_BR"),
- "it": dict(lang="it", pre="/it", courses="Corsi", speaking="Keynote", about="Chi sono", cta="Prenota Dirk", enroll="Iscriviti", contact="Contatti", privacy="Privacy", terms="Termini", tools="Strumenti", og="it_IT"),
+ "en": dict(lang="en", pre="", courses="Courses", speaking="Speaking", about="About", cta="Invite Dirk", enroll="Enroll", contact="Contact", privacy="Privacy", terms="Terms", tools="Tools", og="en_US", cue="Scroll"),
+ "de": dict(lang="de", pre="/de", courses="Kurse", speaking="Keynotes", about="Über mich", cta="Dirk einladen", enroll="Jetzt starten", contact="Kontakt", privacy="Datenschutz", terms="AGB", tools="Tools", og="de_DE", cue="Scrollen"),
+ "es": dict(lang="es", pre="/es", courses="Cursos", speaking="Conferencias", about="Sobre mí", cta="Invitar a Dirk", enroll="Inscríbete", contact="Contacto", privacy="Privacidad", terms="Términos", tools="Herramientas", og="es_ES", cue="Desliza"),
+ "pt": dict(lang="pt-BR", pre="/pt", courses="Cursos", speaking="Palestras", about="Sobre", cta="Convidar Dirk", enroll="Inscreva-se", contact="Contato", privacy="Privacidade", terms="Termos", tools="Ferramentas", og="pt_BR", cue="Role"),
+ "it": dict(lang="it", pre="/it", courses="Corsi", speaking="Keynote", about="Chi sono", cta="Invita Dirk", enroll="Iscriviti", contact="Contatti", privacy="Privacy", terms="Termini", tools="Strumenti", og="it_IT", cue="Scorri"),
 }
 
 S = {
  "en": dict(
   title="Speaking — Dirk Ahlborn",
-  desc="Keynote speaker on innovation, crowd-powered companies and working in the age of AI. Founder of HyperloopTT, 80+ stages from Davos to Austin. Check availability.",
-  eyebrow="Keynote speaker · Founder, HyperloopTT", h1="Put a builder on your stage.",
+  desc="Dirk Ahlborn on stage: innovation, crowd-powered companies and working in the age of AI. Founder of HyperloopTT, 80+ stages from Davos to Austin. Invite Dirk to your event.",
+  eyebrow="Founder, HyperloopTT · Entrepreneur &amp; educator", h1="Put a <em>builder</em> on your stage.",
   lead="Innovation, crowd-powered companies, and what AI changes about how work gets done — from someone who turned an open whitepaper into an 800-person, 40-country company. In person or virtual, in English, German or Italian.",
   cta1="Check availability", cta2="Watch a keynote",
   p1="stages — WEF, SXSW, CES, DLD, Nikkei", p2="countries — keynotes on four continents", p3="Harvard Business School case studies on the model", p4="languages — English, German, Italian",
@@ -37,7 +37,7 @@ S = {
   kit="Press kit",
   bio="Dirk Ahlborn is the founder of Hyperloop Transportation Technologies, the company that turned an open whitepaper into a global effort of 800+ contributors in 40 countries, with government partnerships on three continents and two Harvard Business School case studies on its crowd-powered model. A former Berlin banker who built and sold companies in Italy before incubating startups out of NASA Ames research, he now teaches founders and professionals how to build with crowds, capital and AI, and speaks on innovation and the future of work on stages worldwide.",
   copy="Copy bio", credit="Please credit as \"Dirk Ahlborn, founder of HyperloopTT\". Click a photo to open the full-size file.", h1img="Portrait · city", h2img="Portrait · capsule",
-  booking="Booking", booking_h="Check availability.",
+  booking="Invitations", booking_h="Check availability.",
   booking_p="Tell us about the event and the budget you have in mind. Replies come from Dirk's office, usually within two working days, with availability and terms. Travel is arranged from wherever Dirk is that month, so one combined figure for fee and travel keeps things simple.",
   prefer="Prefer email?",
   l_event="Event name", ph_event="e.g. Future of Living Summit 2027", l_date="Date(s)", ph_date="18 Nov 2026, or 'spring 2027'", l_city="City &amp; country", ph_city="Riyadh, Saudi Arabia",
@@ -48,8 +48,8 @@ S = {
   alt="Dirk Ahlborn in front of a Hyperloop capsule", playlbl="Play keynote video"),
  "de": dict(
   title="Keynotes — Dirk Ahlborn",
-  desc="Keynote-Speaker zu Innovation, Crowd-getriebenen Unternehmen und Arbeiten im KI-Zeitalter. Gründer von HyperloopTT, über 80 Bühnen von Davos bis Austin. Verfügbarkeit anfragen.",
-  eyebrow="Keynote-Speaker · Gründer, HyperloopTT", h1="Ein Macher auf Ihrer Bühne.",
+  desc="Dirk Ahlborn auf der Bühne: Innovation, Crowd-getriebene Unternehmen und Arbeiten im KI-Zeitalter. Gründer von HyperloopTT, über 80 Bühnen von Davos bis Austin. Laden Sie Dirk ein.",
+  eyebrow="Gründer, HyperloopTT · Unternehmer &amp; Dozent", h1="Ein <em>Macher</em> auf Ihrer Bühne.",
   lead="Innovation, Crowd-getriebene Unternehmen und was KI daran ändert, wie Arbeit erledigt wird — von jemandem, der aus einem offenen Whitepaper ein Unternehmen mit 800 Menschen in 40 Ländern gemacht hat. Vor Ort oder virtuell, auf Deutsch, Englisch oder Italienisch.",
   cta1="Verfügbarkeit anfragen", cta2="Keynote ansehen",
   p1="Bühnen — WEF, SXSW, CES, DLD, Nikkei", p2="Länder — Keynotes auf vier Kontinenten", p3="Harvard-Business-School-Fallstudien zum Modell", p4="Sprachen — Deutsch, Englisch, Italienisch",
@@ -70,7 +70,7 @@ S = {
   kit="Pressemappe",
   bio="Dirk Ahlborn ist Gründer von Hyperloop Transportation Technologies, dem Unternehmen, das ein offenes Whitepaper in eine globale Initiative mit über 800 Mitwirkenden in 40 Ländern verwandelte — mit Regierungspartnerschaften auf drei Kontinenten und zwei Fallstudien der Harvard Business School zum Crowd-Modell. Der frühere Berliner Banker baute und verkaufte Unternehmen in Italien, bevor er Startups aus der NASA-Ames-Forschung inkubierte. Heute lehrt er Gründer und Fachleute, mit Crowds, Kapital und KI aufzubauen, und spricht weltweit über Innovation und die Zukunft der Arbeit.",
   copy="Bio kopieren", credit="Bitte als „Dirk Ahlborn, Gründer von HyperloopTT“ nennen. Foto anklicken für die Datei in voller Größe.", h1img="Porträt · Stadt", h2img="Porträt · Kapsel",
-  booking="Buchung", booking_h="Verfügbarkeit anfragen.",
+  booking="Einladungen", booking_h="Verfügbarkeit anfragen.",
   booking_p="Erzählen Sie uns vom Event und vom Budget, das Sie im Kopf haben. Die Antwort kommt aus Dirks Büro, meist innerhalb von zwei Werktagen, mit Verfügbarkeit und Konditionen. Die Anreise wird von dort organisiert, wo Dirk in dem Monat ist — eine Gesamtsumme für Honorar und Reise hält es einfach.",
   prefer="Lieber per E-Mail?",
   l_event="Name des Events", ph_event="z. B. Future of Living Summit 2027", l_date="Datum", ph_date="18. Nov. 2026 oder „Frühjahr 2027“", l_city="Stadt &amp; Land", ph_city="Riad, Saudi-Arabien",
@@ -81,8 +81,8 @@ S = {
   alt="Dirk Ahlborn vor einer Hyperloop-Kapsel", playlbl="Keynote-Video abspielen"),
  "es": dict(
   title="Conferencias — Dirk Ahlborn",
-  desc="Conferenciante sobre innovación, empresas impulsadas por multitudes y el trabajo en la era de la IA. Fundador de HyperloopTT, más de 80 escenarios de Davos a Austin. Consulta disponibilidad.",
-  eyebrow="Conferenciante · Fundador, HyperloopTT", h1="Sube a un constructor a tu escenario.",
+  desc="Dirk Ahlborn en el escenario: innovación, empresas impulsadas por multitudes y el trabajo en la era de la IA. Fundador de HyperloopTT, más de 80 escenarios de Davos a Austin. Invita a Dirk a tu evento.",
+  eyebrow="Fundador, HyperloopTT · Emprendedor y docente", h1="Sube a un <em>constructor</em> a tu escenario.",
   lead="Innovación, empresas impulsadas por multitudes y lo que la IA cambia en la forma de trabajar — de alguien que convirtió un whitepaper abierto en una empresa de 800 personas en 40 países. Presencial o virtual, en inglés, alemán o italiano.",
   cta1="Consultar disponibilidad", cta2="Ver una keynote",
   p1="escenarios — WEF, SXSW, CES, DLD, Nikkei", p2="países — keynotes en cuatro continentes", p3="casos de estudio de Harvard Business School sobre el modelo", p4="idiomas — inglés, alemán, italiano",
@@ -103,7 +103,7 @@ S = {
   kit="Kit de prensa",
   bio="Dirk Ahlborn es el fundador de Hyperloop Transportation Technologies, la empresa que convirtió un whitepaper abierto en un esfuerzo global de más de 800 colaboradores en 40 países, con alianzas gubernamentales en tres continentes y dos casos de estudio de Harvard Business School sobre su modelo impulsado por multitudes. Exbanquero en Berlín, construyó y vendió empresas en Italia antes de incubar startups surgidas de la investigación de NASA Ames. Hoy enseña a fundadores y profesionales a construir con multitudes, capital e IA, y habla sobre innovación y el futuro del trabajo en escenarios de todo el mundo.",
   copy="Copiar bio", credit="Por favor, acredita como «Dirk Ahlborn, fundador de HyperloopTT». Haz clic en una foto para abrir el archivo a tamaño completo.", h1img="Retrato · ciudad", h2img="Retrato · cápsula",
-  booking="Contratación", booking_h="Consulta disponibilidad.",
+  booking="Invitaciones", booking_h="Consulta disponibilidad.",
   booking_p="Cuéntanos sobre el evento y el presupuesto que tienes en mente. Las respuestas llegan desde la oficina de Dirk, normalmente en dos días laborables, con disponibilidad y condiciones. El viaje se organiza desde donde esté Dirk ese mes, así que una cifra combinada para honorarios y viaje lo hace más simple.",
   prefer="¿Prefieres email?",
   l_event="Nombre del evento", ph_event="p. ej. Future of Living Summit 2027", l_date="Fecha(s)", ph_date="18 nov 2026, o «primavera 2027»", l_city="Ciudad y país", ph_city="Riad, Arabia Saudí",
@@ -114,8 +114,8 @@ S = {
   alt="Dirk Ahlborn frente a una cápsula Hyperloop", playlbl="Reproducir vídeo de la keynote"),
  "pt": dict(
   title="Palestras — Dirk Ahlborn",
-  desc="Palestrante sobre inovação, empresas movidas por multidões e trabalho na era da IA. Fundador da HyperloopTT, mais de 80 palcos de Davos a Austin. Consulte a disponibilidade.",
-  eyebrow="Palestrante · Fundador, HyperloopTT", h1="Coloque um construtor no seu palco.",
+  desc="Dirk Ahlborn no palco: inovação, empresas movidas por multidões e trabalho na era da IA. Fundador da HyperloopTT, mais de 80 palcos de Davos a Austin. Convide o Dirk para o seu evento.",
+  eyebrow="Fundador, HyperloopTT · Empreendedor e educador", h1="Coloque um <em>construtor</em> no seu palco.",
   lead="Inovação, empresas movidas por multidões e o que a IA muda na forma de trabalhar — por alguém que transformou um whitepaper aberto em uma empresa de 800 pessoas em 40 países. Presencial ou virtual, em inglês, alemão ou italiano.",
   cta1="Consultar disponibilidade", cta2="Assistir a uma keynote",
   p1="palcos — WEF, SXSW, CES, DLD, Nikkei", p2="países — keynotes em quatro continentes", p3="estudos de caso da Harvard Business School sobre o modelo", p4="idiomas — inglês, alemão, italiano",
@@ -136,7 +136,7 @@ S = {
   kit="Kit de imprensa",
   bio="Dirk Ahlborn é o fundador da Hyperloop Transportation Technologies, a empresa que transformou um whitepaper aberto em um esforço global de mais de 800 colaboradores em 40 países, com parcerias governamentais em três continentes e dois estudos de caso da Harvard Business School sobre o seu modelo movido por multidões. Ex-banqueiro em Berlim, construiu e vendeu empresas na Itália antes de incubar startups nascidas da pesquisa da NASA Ames. Hoje ensina fundadores e profissionais a construir com multidões, capital e IA, e fala sobre inovação e o futuro do trabalho em palcos do mundo todo.",
   copy="Copiar bio", credit="Por favor, credite como «Dirk Ahlborn, fundador da HyperloopTT». Clique em uma foto para abrir o arquivo em tamanho real.", h1img="Retrato · cidade", h2img="Retrato · cápsula",
-  booking="Contratação", booking_h="Consulte a disponibilidade.",
+  booking="Convites", booking_h="Consulte a disponibilidade.",
   booking_p="Conte sobre o evento e o orçamento que você tem em mente. As respostas vêm do escritório do Dirk, normalmente em até dois dias úteis, com disponibilidade e condições. A viagem é organizada de onde o Dirk estiver naquele mês, então um valor único para cachê e viagem simplifica tudo.",
   prefer="Prefere e-mail?",
   l_event="Nome do evento", ph_event="ex.: Future of Living Summit 2027", l_date="Data(s)", ph_date="18 nov 2026, ou «primavera de 2027»", l_city="Cidade e país", ph_city="Riade, Arábia Saudita",
@@ -147,8 +147,8 @@ S = {
   alt="Dirk Ahlborn diante de uma cápsula Hyperloop", playlbl="Reproduzir vídeo da keynote"),
  "it": dict(
   title="Keynote — Dirk Ahlborn",
-  desc="Keynote speaker su innovazione, aziende costruite con la crowd e lavoro nell'era dell'IA. Fondatore di HyperloopTT, oltre 80 palchi da Davos ad Austin. Verifica la disponibilità.",
-  eyebrow="Keynote speaker · Fondatore, HyperloopTT", h1="Porta chi costruisce sul tuo palco.",
+  desc="Dirk Ahlborn sul palco: innovazione, aziende costruite con la crowd e lavoro nell'era dell'IA. Fondatore di HyperloopTT, oltre 80 palchi da Davos ad Austin. Invita Dirk al tuo evento.",
+  eyebrow="Fondatore, HyperloopTT · Imprenditore e docente", h1="Porta <em>chi costruisce</em> sul tuo palco.",
   lead="Innovazione, aziende costruite con la crowd e ciò che l'IA cambia nel modo di lavorare — da chi ha trasformato un whitepaper aperto in un'azienda di 800 persone in 40 paesi. Dal vivo o in virtuale, in italiano, inglese o tedesco.",
   cta1="Verifica la disponibilità", cta2="Guarda una keynote",
   p1="palchi — WEF, SXSW, CES, DLD, Nikkei", p2="paesi — keynote in quattro continenti", p3="casi di studio della Harvard Business School sul modello", p4="lingue — italiano, inglese, tedesco",
@@ -169,7 +169,7 @@ S = {
   kit="Press kit",
   bio="Dirk Ahlborn è il fondatore di Hyperloop Transportation Technologies, l'azienda che ha trasformato un whitepaper aperto in uno sforzo globale di oltre 800 collaboratori in 40 paesi, con partnership governative in tre continenti e due casi di studio della Harvard Business School sul suo modello costruito con la crowd. Ex banchiere a Berlino, ha fondato e venduto aziende in Italia prima di incubare startup nate dalla ricerca del NASA Ames. Oggi insegna a founder e professionisti a costruire con crowd, capitale e IA, e parla di innovazione e futuro del lavoro sui palchi di tutto il mondo.",
   copy="Copia bio", credit="Citare come «Dirk Ahlborn, fondatore di HyperloopTT». Clicca una foto per aprire il file a grandezza intera.", h1img="Ritratto · città", h2img="Ritratto · capsula",
-  booking="Prenotazione", booking_h="Verifica la disponibilità.",
+  booking="Inviti", booking_h="Verifica la disponibilità.",
   booking_p="Raccontaci l'evento e il budget che hai in mente. Le risposte arrivano dall'ufficio di Dirk, di solito entro due giorni lavorativi, con disponibilità e condizioni. Il viaggio si organizza da dove si trova Dirk quel mese: una cifra unica per compenso e viaggio semplifica tutto.",
   prefer="Preferisci l'email?",
   l_event="Nome dell'evento", ph_event="es. Future of Living Summit 2027", l_date="Data/e", ph_date="18 nov 2026, oppure «primavera 2027»", l_city="Città e paese", ph_city="Riad, Arabia Saudita",
@@ -183,6 +183,10 @@ S = {
 LANGBAR = {"en": "English", "de": "Deutsch", "es": "Español", "pt": "Português", "it": "Italiano"}
 IMG_CITY = "https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/8997d3e1-8994-4dfd-b3e1-b21fbc813d85.jpg"
 IMG_CAP = "https://d2ol7oe51mr4n9.cloudfront.net/user_3F0So49nurWetb0sObRtCUzVKwQ/ef7391c5-5456-4a08-ba18-c7a8f665d76c.webp"
+
+_ST = ["World Economic Forum", "SXSW", "CES", "DLD", "Pioneers", "Nikkei Forum", "Open Innovation Forum"]
+STAGES = "".join(f"<span>{x}</span>" for x in _ST)
+STAGES_DUP = "".join(f'<span aria-hidden="true">{x}</span>' for x in _ST)
 
 def langbar(loc):
     parts = []
@@ -222,6 +226,8 @@ def footer(loc):
 def page(loc):
     s = S[loc]; n = NAV[loc]; p = n["pre"]; url = f"https://dirk.it{p}/speaking/"
     home = (p + "/") if p else "/"
+    QS = '"\u201c\u201d\u201e\u00ab\u00bb'
+    q1 = s["q1"].strip(QS); q2 = s["q2"].strip(QS)
     return f'''<!DOCTYPE html>
 <html lang="{n["lang"]}">
 <head>
@@ -230,7 +236,8 @@ def page(loc):
 <title>{s["title"]}</title>
 <meta name="description" content="{s["desc"]}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js");addEventListener("load",function(){{setTimeout(function(){{if(!window.__rv)document.documentElement.classList.remove("js")}},2500)}})</script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/speaking.css">
@@ -253,7 +260,7 @@ def page(loc):
 <meta name="twitter:title" content="{s["title"]}">
 <meta name="twitter:description" content="{s["desc"]}">
 <meta name="twitter:image" content="{IMG_CAP}">
-<script type="application/ld+json">{{"@context":"https://schema.org","@graph":[{{"@type":"Person","@id":"https://dirk.it/#dirk","name":"Dirk Ahlborn","url":"https://dirk.it/","jobTitle":"Founder & CEO, HyperloopTT","description":"Entrepreneur, educator and keynote speaker on innovation, crowd-powered companies and working in the age of AI. 80+ stages worldwide.","knowsLanguage":["en","de","it"],"image":"{IMG_CAP}"}},{{"@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Dirk Ahlborn","item":"https://dirk.it{home}"}},{{"@type":"ListItem","position":2,"name":"{n["speaking"]}","item":"{url}"}}]}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@graph":[{{"@type":"Person","@id":"https://dirk.it/#dirk","name":"Dirk Ahlborn","url":"https://dirk.it/","jobTitle":"Founder & CEO, HyperloopTT","description":"Entrepreneur and educator, founder of HyperloopTT. Speaks on innovation, crowd-powered companies and working in the age of AI on 80+ stages worldwide.","knowsLanguage":["en","de","it"],"image":"{IMG_CAP}"}},{{"@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Dirk Ahlborn","item":"https://dirk.it{home}"}},{{"@type":"ListItem","position":2,"name":"{n["speaking"]}","item":"{url}"}}]}}]}}</script>
 <!-- SEO:end -->
 </head>
 <body>
@@ -284,17 +291,22 @@ def page(loc):
         <a href="#watch" class="btnGhost">{s["cta2"]}</a>
       </div>
     </div>
+    <div class="cue" aria-hidden="true">{n["cue"]}</div>
   </section>
 
   <section class="proof">
-    <div><b>80+</b><span>{s["p1"]}</span></div>
-    <div><b>40+</b><span>{s["p2"]}</span></div>
-    <div><b>2</b><span>{s["p3"]}</span></div>
-    <div><b>3</b><span>{s["p4"]}</span></div>
+    <div class="rv"><b data-count="80">80+</b><span>{s["p1"]}</span></div>
+    <div class="rv d1"><b data-count="40">40+</b><span>{s["p2"]}</span></div>
+    <div class="rv d2"><b data-count="2">2</b><span>{s["p3"]}</span></div>
+    <div class="rv d3"><b data-count="3">3</b><span>{s["p4"]}</span></div>
+  </section>
+
+  <section class="marquee" aria-label="{s["stages"]}">
+    <div class="track">{STAGES}{STAGES_DUP}</div>
   </section>
 
   <section class="wrap" id="watch">
-    <div class="watch">
+    <div class="watch rv">
       <div class="facade" id="facade" role="button" tabindex="0" aria-label="{s["playlbl"]}">
         <div class="play"><svg width="30" height="30" viewBox="0 0 24 24" fill="#0A0A09"><path d="M8 5v14l11-7z"/></svg></div>
         <div class="cap">{s["cap"]}</div>
@@ -308,40 +320,37 @@ def page(loc):
   </section>
 
   <section class="wrap tight">
-    <div class="eyebrow">{s["talks"]}</div>
-    <h2 class="h2 mt">{s["talks_h"]}</h2>
-    <div class="talks">
-      <div class="talk"><h3>{s["t1"]}</h3><p class="promise">{s["t1p"]}</p><ul><li>{s["t1a"]}</li><li>{s["t1b"]}</li><li>{s["t1c"]}</li></ul><div class="for">{s["t1f"]}</div></div>
-      <div class="talk"><h3>{s["t2"]}</h3><p class="promise">{s["t2p"]}</p><ul><li>{s["t2a"]}</li><li>{s["t2b"]}</li><li>{s["t2c"]}</li></ul><div class="for">{s["t2f"]}</div></div>
-      <div class="talk"><h3>{s["t3"]}</h3><p class="promise">{s["t3p"]}</p><ul><li>{s["t3a"]}</li><li>{s["t3b"]}</li><li>{s["t3c"]}</li></ul><div class="for">{s["t3f"]}</div></div>
+    <div class="eyebrow rv">{s["talks"]}</div>
+    <h2 class="h2 mt rv">{s["talks_h"]}</h2>
+    <div class="tlist">
+      <article class="trow rv"><div class="tnum">01</div><div class="tmain"><h3>{s["t1"]}</h3><p class="promise">{s["t1p"]}</p><div class="for">{s["t1f"]}</div></div><ul><li>{s["t1a"]}</li><li>{s["t1b"]}</li><li>{s["t1c"]}</li></ul></article>
+      <article class="trow rv"><div class="tnum">02</div><div class="tmain"><h3>{s["t2"]}</h3><p class="promise">{s["t2p"]}</p><div class="for">{s["t2f"]}</div></div><ul><li>{s["t2a"]}</li><li>{s["t2b"]}</li><li>{s["t2c"]}</li></ul></article>
+      <article class="trow rv"><div class="tnum">03</div><div class="tmain"><h3>{s["t3"]}</h3><p class="promise">{s["t3p"]}</p><div class="for">{s["t3f"]}</div></div><ul><li>{s["t3a"]}</li><li>{s["t3b"]}</li><li>{s["t3c"]}</li></ul></article>
     </div>
   </section>
 
   <section class="wrap tight">
-    <div class="eyebrow">{s["stages"]}</div>
-    <div class="stages">
-      <span>World Economic Forum</span><span>SXSW</span><span>CES</span><span>DLD</span><span>Pioneers</span><span>Nikkei Forum</span><span>Open Innovation Forum</span>
-    </div>
-    <div class="quotes">
-      <blockquote><p>{s["q1"]}</p><cite>{s["q1c"]}</cite></blockquote>
-      <blockquote><p>{s["q2"]}</p><cite>{s["q2c"]}</cite></blockquote>
+    <div class="pull rv">
+      <blockquote><p>{q1}</p><cite>{s["q1c"]}</cite></blockquote>
+      <div class="rule"></div>
+      <blockquote class="second"><p>{q2}</p><cite>{s["q2c"]}</cite></blockquote>
     </div>
   </section>
 
   <section class="wrap tight">
-    <div class="eyebrow">{s["formats"]}</div>
-    <h2 class="h2 mt">{s["formats_h"]}</h2>
+    <div class="eyebrow rv">{s["formats"]}</div>
+    <h2 class="h2 mt rv">{s["formats_h"]}</h2>
     <div class="formats">
-      <div><b>{s["f1"]}</b><span>{s["f1p"]}</span></div>
-      <div><b>{s["f2"]}</b><span>{s["f2p"]}</span></div>
-      <div><b>{s["f3"]}</b><span>{s["f3p"]}</span></div>
-      <div><b>{s["f4"]}</b><span>{s["f4p"]}</span></div>
+      <div class="rv"><i>i.</i><b>{s["f1"]}</b><span>{s["f1p"]}</span></div>
+      <div class="rv d1"><i>ii.</i><b>{s["f2"]}</b><span>{s["f2p"]}</span></div>
+      <div class="rv d2"><i>iii.</i><b>{s["f3"]}</b><span>{s["f3p"]}</span></div>
+      <div class="rv d3"><i>iv.</i><b>{s["f4"]}</b><span>{s["f4p"]}</span></div>
     </div>
   </section>
 
   <section class="wrap tight" id="presskit">
-    <div class="eyebrow">{s["kit"]}</div>
-    <div class="kit">
+    <div class="eyebrow rv">{s["kit"]}</div>
+    <div class="kit rv">
       <div class="bioBox">
         <p class="bio" id="bio">{s["bio"]}</p>
         <button class="copybtn" type="button" data-copy="bio">{s["copy"]}</button>
@@ -354,8 +363,8 @@ def page(loc):
     </div>
   </section>
 
-  <section class="wrap" id="inquire" style="border-top:1px solid rgba(242,239,233,.1)">
-    <div class="inq">
+  <div class="inqWrap"><section class="wrap" id="inquire">
+    <div class="inq rv">
       <div class="side">
         <div class="eyebrow">{s["booking"]}</div>
         <h2 class="h2">{s["booking_h"]}</h2>
@@ -369,7 +378,7 @@ def page(loc):
         <label>{s["l_city"]}<input name="event_city" required placeholder="{s["ph_city"]}"></label>
         <label>{s["l_format"]}<select name="event_format"><option>{s["fo1"]}</option><option>{s["fo2"]}</option><option>{s["fo3"]}</option><option>{s["fo4"]}</option><option>{s["fo5"]}</option></select></label>
         <label>{s["l_aud"]}<select name="audience_size"><option>{s["au1"]}</option><option>{s["au2"]}</option><option>{s["au3"]}</option><option>{s["au4"]}</option></select></label>
-        <label class="full">{s["l_budget"]}<select name="budget_range"><option value="">{s["bu0"]}</option><option>{s["bu1"]}</option><option>{s["bu2"]}</option><option>{s["bu3"]}</option><option>{s["bu4"]}</option><option>{s["bu5"]}</option><option>{s["bu6"]}</option></select></label>
+        <label class="full">{s["l_budget"]}<select name="budget_range"><option value="">{s["bu0"]}</option><option>{s["bu1"]}</option><option>{s["bu2"]}</option><option>{s["bu3"]}</option><option>{s["bu4"]}</option><option>{s["bu6"]}</option></select></label>
         <label>{s["l_name"]}<input name="name" required autocomplete="name"></label>
         <label>{s["l_email"]}<input name="email" type="email" required autocomplete="email"></label>
         <label class="full">{s["l_org"]}<input name="company" autocomplete="organization"></label>
@@ -378,7 +387,7 @@ def page(loc):
         <button class="btnGold" type="submit" id="fbtn">{s["send"]}</button>
       </form>
     </div>
-  </section>
+  </section></div>
 
 {footer(loc)}
 </div>
