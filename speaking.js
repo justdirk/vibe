@@ -10,6 +10,27 @@
   var lang = (document.documentElement.lang || "en").slice(0, 2);
   var t = T[lang] || T.en;
 
+  // scroll reveal + count-up (CSS only hides .rv when <html class="js">)
+  var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function countUp(b) {
+    var end = parseInt(b.getAttribute("data-count"), 10), suf = b.textContent.replace(/[0-9]/g, ""), t0 = null;
+    if (!end || still) return;
+    function step(ts) { if (!t0) t0 = ts; var k = Math.min(1, (ts - t0) / 1400), e = 1 - Math.pow(1 - k, 3); b.textContent = Math.round(end * e) + suf; if (k < 1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  window.__rv = 1;
+  var rv = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window && !still) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in"); io.unobserve(e.target);
+        e.target.querySelectorAll("[data-count]").forEach(countUp);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    rv.forEach(function (el) { io.observe(el); });
+  } else { rv.forEach(function (el) { el.classList.add("in"); }); }
+
   var fac = document.getElementById("facade");
   if (fac) {
     var play = function () {
